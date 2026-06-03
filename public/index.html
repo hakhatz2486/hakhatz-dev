@@ -8,9 +8,9 @@
             content="白捌のウェブサイト。このサイトは現在準備中です。今後のプロジェクトやコンテンツはこちらで公開される予定です。"
         />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="icon" href="images/hakhatz2486_32.ico" sizes="32x32" />
-        <link rel="icon" href="images/hakhatz2486_48.ico" sizes="48x48" />
-        <link rel="icon" href="images/hakhatz2486_48.ico" sizes="48x48" />
+        <link rel="icon" href="/images/hakhatz2486_32.ico" sizes="32x32" />
+        <link rel="icon" href="/images/hakhatz2486_48.ico" sizes="48x48" />
+        <link rel="icon" href="/images/hakhatz2486_48.ico" sizes="48x48" />
         <title>hakhatz.dev</title>
     </head>
     <body>
@@ -22,10 +22,11 @@
                 </p>
             </hgroup>
         </header>
+
         <main>
             <figure>
                 <img
-                    id="profile-image"
+                    class="profile-image"
                     src="images/hakhatz2486_256.webp"
                     alt="hakhatzのアイコン(webp)"
                     width="256"
@@ -33,12 +34,22 @@
                     loading="lazy"
                 />
             </figure>
+
+            <h2>Pages</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="sandbox/index.html">Sandbox</a>
+                    </li>
+                </ul>
+            </nav>
+
             <h2>Links</h2>
             <nav>
                 <ul>
                     <li>
                         <a
-                        href="https://github.com/hakhatz2486"
+                            href="https://github.com/hakhatz2486"
                             target="_blank"
                             rel="noopener noreferrer"
                             >GitHub</a
@@ -62,13 +73,8 @@
                     </li>
                 </ul>
             </nav>
-            <h2>引用文のテスト</h2>
-            <p>引用文の前の文のテスト。</p>
-            <blockquote>
-                引用文のテスト。
-            </blockquote>
-            <p>引用文のあとの文のテスト。</p>
         </main>
+
         <footer>
             <small>&copy; 2026 hakhatz</small>
         </footer>

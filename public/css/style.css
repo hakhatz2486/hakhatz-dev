@@ -1,18 +1,26 @@
+/* ライトモード */
 :root {
-    --bg-color: #fbf1c7;
+    --background-color: #fbf1c7;
     --text-color: #242424;
 
     --link-color: #6a36dd;
     --link-hover-color: #4a1da3;
+
+    --code-inline-text-color: #c7254e;
+    --code-inline-background-color: #f9f2f4;
 }
 
+/* ダークモード */
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #242424;
+        --background-color: #242424;
         --text-color: #dddddd;
 
         --link-color: #8a5cf5;
         --link-hover-color: #c5b6fc;
+
+        --code-inline-text-color: #ff4d79;
+        --code-inline-background-color: #3a262c;
     }
 }
 
@@ -23,35 +31,67 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--background-color);
     color: var(--text-color);
 
     transition: all 0.5s;
 
-    font-family: sans-serif;
+    font-family:
+        ui-sans-serif,
+        system-ui,
+        /* Mac/iOS向けのシステムフォント */ -apple-system,
+        /* レガシーなMac/iOS向け */ blinkmacsystemfont,
+        sans-serif;
 }
 
-a:link,
-a:visited {
-    color: var(--link-color);
-}
-
-a:hover,
-a:active {
-    color: var(--link-hover-color);
-}
-
-#profile-image {
-    max-width: 100px;
-    max-height: 100px;
-    border-radius: 50%;
+footer {
+    margin: 2em 0em;
 }
 
 /* リンクの大きさは24px以上のルールを満たす https://dequeuniversity.com/rules/axe/4.11/target-size */
 a {
+    display: inline-block;
     min-height: 24px;
+
+    &:link,
+    &:visited {
+        color: var(--link-color);
+    }
+
+    &:hover,
+    &:active {
+        color: var(--link-hover-color);
+    }
 }
 
 blockquote {
-    border-left-color: lightgray;
+    border-left: solid 0.25em lightgray;
+    padding: 0em 0em 0em 1em;
+}
+
+code {
+    font-family: ui-monospace, monospace;
+
+    &.code-inline {
+        display: inline;
+        font-size: 0.9em;
+        color: var(--code-inline-text-color);
+        background-color: var(--code-inline-background-color);
+        padding: 0.1em 0.5em;
+        /*border-radius: 4px;*/
+    }
+
+    &.code-block {
+        background-color: var(--code-inline-background-color);
+    }
+}
+
+math {
+    font-family: math, ui-serif;
+}
+
+.profile-image {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
 }
