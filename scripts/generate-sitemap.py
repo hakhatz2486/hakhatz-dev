@@ -43,28 +43,28 @@ for root, dirs, files in os.walk(html_dir):
                 mtime = os.path.getmtime(file_full_path)
                 lastmod_date = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
 
-            # 2. Gitの履歴から「最初のコミット日（作成日）」を取得
-            try:
-                result_created = subprocess.run(
-                    [
-                        "git",
-                        "log",
-                        "--reverse",
-                        "-1",
-                        "--format=%cd",
-                        "--date=format:%Y-%m-%d",
-                        file_full_path,
-                    ],
-                    capture_output=True,
-                    text=True,
-                    check=True,
-                    encoding="utf-8",
-                )
-                created_date = result_created.stdout.strip()
-                if not created_date:
-                    created_date = datetime.now().strftime("%Y-%m-%d")
-            except (subprocess.CalledProcessError, FileNotFoundError):
-                created_date = lastmod_date  # エラー時は最終更新日を流用
+            # # 2. Gitの履歴から「最初のコミット日（作成日）」を取得
+            # try:
+            #     result_created = subprocess.run(
+            #         [
+            #             "git",
+            #             "log",
+            #             "--reverse",
+            #             "-1",
+            #             "--format=%cd",
+            #             "--date=format:%Y-%m-%d",
+            #             file_full_path,
+            #         ],
+            #         capture_output=True,
+            #         text=True,
+            #         check=True,
+            #         encoding="utf-8",
+            #     )
+            #     created_date = result_created.stdout.strip()
+            #     if not created_date:
+            #         created_date = datetime.now().strftime("%Y-%m-%d")
+            # except (subprocess.CalledProcessError, FileNotFoundError):
+            #     created_date = lastmod_date  # エラー時は最終更新日を流用
 
             # public/ からの相対パスを取得
             rel_path = os.path.relpath(file_full_path, html_dir)
@@ -81,7 +81,7 @@ for root, dirs, files in os.walk(html_dir):
             xml_content += "  <url>\n"
             xml_content += f"    <loc>{site_url}{url_path}</loc>\n"
             xml_content += f"    <lastmod>{lastmod_date}</lastmod>\n"
-            xml_content += f"    <created>{created_date}</created>\n"
+            # xml_content += f"    <created>{created_date}</created>\n" # createdは無効化
             xml_content += "  </url>\n"
 
 xml_content += "</urlset>\n"
