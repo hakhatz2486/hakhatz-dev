@@ -21,6 +21,9 @@
 
         --code-inline-text-color: #ff4d79;
         --code-inline-background-color: #3a262c;
+
+        --code-block-background-color: #303030;
+        --code-block-title-background-color: #202020;
     }
 }
 
@@ -71,23 +74,58 @@ blockquote {
 
 code {
     font-family: ui-monospace, monospace;
+    font-size: 0.9em;
 
     &.code-inline {
-        display: inline;
-        font-size: 0.9em;
+        display: inline-block;
+
         color: var(--code-inline-text-color);
         background-color: var(--code-inline-background-color);
-        padding: 0.1em 0.5em;
-        /*border-radius: 4px;*/
+
+        height: 1rem;
+        margin: 0rem 0.25rem;
+        padding: 0.1rem 0.1rem;
     }
 
     &.code-block {
-        background-color: var(--code-inline-background-color);
+        width: fit-content;
+        margin-top: 0;
     }
+}
+
+figure {
+    &.code-container {
+        position: relative;
+        background-color: var(--code-block-background-color);
+        padding: 2em 1.5em 2em 1.5em;
+
+        width: fit-content;
+        min-width: 40em;
+        max-width: 80%;
+    }
+}
+
+figcaption {
+    &.code-block-title {
+        position: absolute; /* 絶対配置にする */
+        top: 0; /* コンテナの最上部に合わせる */
+        left: 1em; /* コンテナの左パディング位置に合わせる */
+
+        background-color: var(--code-block-title-background-color);
+        padding: 0.1em 0.5em;
+        width: fit-content;
+    }
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 math {
     font-family: math, ui-serif;
+    font-size: 1.5em;
 }
 
 .profile-image {
