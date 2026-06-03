@@ -5,25 +5,38 @@ import sys
 def main():
     # 1. 引数がある場合は、引数の文字列を処理
     if len(sys.argv) > 1:
-        # 複数の引数がある場合はスペースで結合
         raw_text = " ".join(sys.argv[1:])
         escaped_text = html.escape(raw_text)
         print(escaped_text)
 
-    # 2. 引数がない場合は、標準入力を待機（パイプ受付など）
+    # 2. 引数がない場合は、標準入力を一括処理
     else:
-        # ターミナルが対話モードの場合は、ユーザーに入力を促す
         if sys.stdin.isatty():
-            try:
-                raw_text = input("Enter string to escape: ")
-                print(html.escape(raw_text))
-            except (KeyboardInterrupt, EOFError):
-                pass
-        else:
-            # パイプやリダイレクト経由での入力を一括処理
-            raw_text = sys.stdin.read()
-            # 末尾の余分な改行コードを除去したい場合は .rstrip('\n') を追加してください
-            print(html.escape(raw_text), end="")
+            print(
+                "Enter string to escape (Press Ctrl+D or Ctrl+Z to finish):",
+                file=sys.stderr,
+            )
+
+        try:
+            lines = []
+            for line in sys.stdin:
+                if "\x04" in line:
+                    lines.append(line.replace("\x04", ""))
+                    break
+                lines.append(line)
+
+            raw_text = "".join(lines)
+
+            if raw_text:
+                # 対話モードの場合のみ、入力と出力の境界を示す区切り線を標準エラー出力に表示
+                if sys.stdin.isatty():
+                    print("\n", "-" * 40, "\n", file=sys.stderr)
+
+                print(
+                    html.escape(raw_text), end="" if raw_text.endswith("\n") else "\n"
+                )
+        except (KeyboardInterrupt, EOFError):
+            pass
 
 
 if __name__ == "__main__":
