@@ -1,0 +1,57 @@
+:root {
+    --bg-color: #fbf1c7;
+    --text-color: #242424;
+
+    --link-color: #6a36dd;
+    --link-hover-color: #4a1da3;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #242424;
+        --text-color: #dddddd;
+
+        --link-color: #8a5cf5;
+        --link-hover-color: #c5b6fc;
+    }
+}
+
+*,
+*::before,
+*::after {
+    font-family: inherit;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    transition: all 0.5s;
+
+    font-family: sans-serif;
+}
+
+a:link,
+a:visited {
+    color: var(--link-color);
+}
+
+a:hover,
+a:active {
+    color: var(--link-hover-color);
+}
+
+#profile-image {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+}
+
+/* リンクの大きさは24px以上のルールを満たす https://dequeuniversity.com/rules/axe/4.11/target-size */
+a {
+    min-height: 24px;
+}
+
+blockquote {
+    border-left-color: lightgray;
+}
