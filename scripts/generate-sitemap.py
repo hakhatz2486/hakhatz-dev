@@ -90,4 +90,4 @@ xml_content += "</urlset>\n"
 with open(sitemap_path, "w", encoding="utf-8") as f:
     f.write(xml_content)
 
-print(f"{sitemap_path} をカスタムタグ付きで生成しました。")
+print(f"Generated {sitemap_path}")
