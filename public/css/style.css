@@ -42,6 +42,8 @@ body {
 
     transition: all 0.5s;
 
+    margin: 0em 2em;
+
     font-family:
         ui-sans-serif,
         system-ui,
