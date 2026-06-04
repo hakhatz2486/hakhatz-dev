@@ -1,9 +1,9 @@
 /* ライトモード */
 :root {
+    --link-base: #8a5cf5;
+
     --background-color: #fbf1c7;
     --text-color: #242424;
-
-    --link-base: #8a5cf5;
 
     --link-color: #6a36dd;
     --link-hover-color: #4a1da3;
