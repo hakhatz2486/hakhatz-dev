@@ -56,3 +56,40 @@
     - Continuous Integration
     - CI/CD設定の変更
     - GitHub Actions、GitLab CI、CircleCIなどの設定ファイルやスクリプトの追加・変更・修正（choreよりCI/CD周りに特化）
+
+## ディレクトリ構成
+
+- `.git/hooks/`
+    - `post-commit`: PowerShellから`post-commit`を実行するためのスクリプト
+    - `post-commit.ps1`: `hakhatz-dev/scripts/generate-sitemap.py`を実行しサイトマップを生成する
+- `public/`: 公開される静的ファイルのルート
+    - `css/`: スタイルシート
+    - `images/`: アイコンや画像
+    - `js/`: JavaScript(現在(2026-06-06)は未使用)
+- `scripts/`: 開発・保守用スクリプトを格納する
+    - `escape-code.py`: テキストを実体参照に変換するスクリプト
+    - `generate-sitemap.py`: サイトマップ(`public/sitemap.xml`)を自動生成するスクリプト
+    - `serve.ps1`: Pythonの標準機能を利用して、ローカル環境で簡易的なWebサーバーを起動するスクリプト
+    - `tree.py`: ディレクトリ構造をYAML形式で出力するスクリプト
+
+## ローカル開発環境
+
+本プロジェクトはWindowsで開発されています。確認する場合はWindows PowerShellを使用してください。
+
+### 実行例
+
+```PowerShell
+.\scrips\serve.ps1
+```
+
+## ライセンス
+
+コンテンツの著作権は白捌に帰属します。
+
+### ソースコード
+
+`scripts/` 内のスクリプト、および各HTML/CSS/JSファイルのプログラム構造そのものは、[MIT License](LICENSE) のもとで自由に使用・改変・再配布が可能です。
+
+### コンテンツ
+
+`public/` 内に掲載されている文章、記事、ロゴ、およびすべての画像資産(`public/images/` 等)の著作権は制作者(hakhatz)に帰属します。著作権法により認められる「引用」などの範囲を超えて、無断で複製、転載、改変、翻案、公衆送信等を行うことを禁止します。
