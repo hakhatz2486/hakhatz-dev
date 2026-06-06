@@ -116,7 +116,7 @@ figure {
     &.code-block-container {
         position: relative;
         background-color: var(--code-block-background-color);
-        padding: 2em 1.5em 2em 1.5em;
+        padding: 2em 1.5em;
     }
 }
 
