@@ -67,7 +67,7 @@ body {
 }
 
 footer {
-    border-top: solid 2px lightgray;
+    border-top: 2px solid var(--border-color);
     margin: 2em 0;
 }
 
@@ -88,7 +88,7 @@ a {
 }
 
 blockquote {
-    border-left: solid 0.25em lightgray;
+    border-left: 0.25em solid var(--blockquote-color);
     padding: 0 0 0 1em;
 }
 
