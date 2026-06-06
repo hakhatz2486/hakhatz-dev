@@ -67,6 +67,7 @@ body {
 }
 
 footer {
+    border-top: solid 2px lightgray;
     margin: 2em 0;
 }
 
