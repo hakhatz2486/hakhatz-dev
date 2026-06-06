@@ -1,17 +1,19 @@
 /* === ライト/ダークモード対応 === */
 /* ライトモード */
 :root {
-    --link-base: #8a5cf5;
-
     --background-color: #fbf1c7;
     --text-color: #242424;
 
+    --border-color: gray;
+
+    --blockquote-color: gray;
+
+    --link-basecolor: #8a5cf5;
     --link-color: #6a36dd;
     --link-hover-color: #4a1da3;
 
     --code-inline-text-color: #c7254e;
     --code-inline-background-color: #f9f2f4;
-
     --code-block-background-color: #ffffff;
     --code-block-title-background-color: #e8e8e8;
 }
@@ -19,15 +21,18 @@
 /* ダークモード */
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #242424;
-        --text-color: #dddddd;
+        --background-color: #282420;
+        --text-color: lightgray;
+
+        --border-color: dimgray;
+
+        --blockquote-color: dimgray;
 
         --link-color: #8a5cf5;
         --link-hover-color: #c5b6fc;
 
         --code-inline-text-color: #ff4d79;
         --code-inline-background-color: #3a262c;
-
         --code-block-background-color: #303030;
         --code-block-title-background-color: #202020;
     }
@@ -39,6 +44,10 @@
     figure.code-block-container,
     blockquote {
         margin: auto 0;
+    }
+
+    figure.code-block-container {
+        margin: auto -2em;
     }
 }
 
