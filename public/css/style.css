@@ -1,3 +1,4 @@
+/* === ライト/ダークモード対応 === */
 /* ライトモード */
 :root {
     --link-base: #8a5cf5;
@@ -29,6 +30,15 @@
 
         --code-block-background-color: #303030;
         --code-block-title-background-color: #202020;
+    }
+}
+
+/* === モバイル対応 === */
+@media (max-width: 767px) {
+    /* インデントの解除 */
+    figure.code-container,
+    blockquote {
+        margin-left: 0;
     }
 }
 
@@ -94,20 +104,17 @@ code {
     }
 
     &.code-block {
-        width: fit-content;
         margin-top: 0;
+        display: block;
+        max-width: 100%;
     }
 }
 
 figure {
-    &.code-container {
+    &.code-block-container {
         position: relative;
         background-color: var(--code-block-background-color);
         padding: 2em 1.5em 2em 1.5em;
-
-        width: fit-content;
-        min-width: 40em;
-        max-width: 80%;
     }
 }
 
@@ -127,6 +134,8 @@ pre {
     margin: 0;
     padding: 0;
     width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 
 math {
