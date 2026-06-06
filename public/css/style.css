@@ -93,10 +93,6 @@ header {
 footer {
     border-top: 1px solid var(--border-color);
     margin: 2em 0;
-
-    p {
-        font-size: 0.8rem;
-    }
 }
 
 /* リンクの大きさは24px以上のルールを満たす https://dequeuniversity.com/rules/axe/4.11/target-size */
