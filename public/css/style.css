@@ -4,9 +4,9 @@
     --background-color: #fbf1c7;
     --text-color: #242424;
 
-    --border-color: gray;
+    --border-color: darkgray;
 
-    --blockquote-color: gray;
+    --blockquote-color: darkgray;
 
     --link-basecolor: #8a5cf5;
     --link-color: #6a36dd;
@@ -75,9 +75,28 @@ body {
         sans-serif;
 }
 
+header {
+    border-bottom: 1px solid var(--border-color);
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-decoration-line: none;
+        color: var(--text-color);
+    }
+}
+
 footer {
-    border-top: 2px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
     margin: 2em 0;
+
+    p {
+        font-size: 0.8rem;
+    }
 }
 
 /* リンクの大きさは24px以上のルールを満たす https://dequeuniversity.com/rules/axe/4.11/target-size */
