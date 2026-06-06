@@ -36,9 +36,9 @@
 /* === モバイル対応 === */
 @media (max-width: 767px) {
     /* インデントの解除 */
-    figure.code-container,
+    figure.code-block-container,
     blockquote {
-        margin-left: 0;
+        margin: auto 0;
     }
 }
 
