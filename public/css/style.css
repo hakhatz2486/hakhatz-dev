@@ -52,7 +52,9 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
 
-    transition: all 0.5s;
+    transition:
+        background-color 0.5s,
+        color 0.5s;
 
     margin: 0 2em;
 
