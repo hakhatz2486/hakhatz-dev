@@ -40,14 +40,8 @@
 
 /* === モバイル対応 === */
 @media (max-width: 767px) {
-    /* インデントの解除 */
-    figure.code-block-container,
-    blockquote {
-        margin: auto 0;
-    }
-
-    figure.code-block-container {
-        margin: auto -2em;
+    .indent {
+        margin-left: 1rem;
     }
 }
 
@@ -113,6 +107,7 @@ a {
 
 blockquote {
     border-left: 0.25em solid var(--blockquote-color);
+    margin: auto 0;
     padding: 0 0 0 1em;
 }
 
@@ -141,6 +136,7 @@ figure {
     &.code-block-container {
         position: relative;
         background-color: var(--code-block-background-color);
+        margin: auto 0;
         padding: 2em 1.5em;
     }
 }
