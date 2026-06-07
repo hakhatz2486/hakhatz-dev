@@ -7,6 +7,11 @@
     <link rel="icon" href="/images/hakhatz2486_32.ico" sizes="32x32" />
     <link rel="icon" href="/images/hakhatz2486_48.ico" sizes="48x48" />
 
+    <!-- Prism.js -->
+    <link rel="stylesheet" href="/themes/prism.css" />
+    <script defer src="/themes/prism.js"></script>
+    <!-- Prism.js -->
+
     <!-- KaTex -->
     <link
       rel="stylesheet"
@@ -14,16 +19,12 @@
       integrity="sha384-vlBdW0r3AcZO/HboRPznQNowvexd3fY8qHOWkBi5q7KGgqJ+F48+DceybYmrVbmB"
       crossorigin="anonymous"
     />
-
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.js"
       integrity="sha384-AtrdNsnxl/75rvBneBVH7DtOvCxSVahR2zWqle1coBKd8DEmLoviqNeJSx64gNAs"
       crossorigin="anonymous"
     ></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/contrib/auto-render.min.js"
@@ -31,7 +32,7 @@
       crossorigin="anonymous"
       onload="renderMathInElement(document.body)"
     ></script>
-    <!--/KaTeX -->
+    <!-- KaTeX -->
 
     <meta name="description" content="サンドボックス" />
     <title>サンドボックス - hakhatz.dev</title>
@@ -119,11 +120,7 @@
           以下が<code class="code-inline">Hello, World!</code
           >を出力するコードです。
         </p>
-        <figure class="code-block-container">
-          <figcaption class="code-block-title">
-            <code>hello-world.cpp</code>
-          </figcaption>
-          <pre><code class="code-block">#include &lt;iostream&gt; // 必要な機能(ここでは std::cout, std::endl)を外部から取り入れる
+        <pre><code class="language-cpp">#include &lt;iostream&gt; // 必要な機能(ここでは std::cout, std::endl)を外部から取り入れる
 
 // プログラムは通常 main 関数から実行される
 int main(void)
@@ -135,7 +132,6 @@ int main(void)
     return 0;
 }
 </code></pre>
-        </figure>
         <p>
           C++は派生元であるC言語を拡張した言語です。そのため、C言語と同様の関数も使用できます。
         </p>
@@ -143,8 +139,7 @@ int main(void)
           以下はC言語の出力関数<code class="code-inline">printf()</code
           >を使ったコードです。
         </p>
-        <figure class="code-block-container">
-          <pre><code class="code-block">#include &lt;stdio.h&gt; // printf() を外部から取り入れる
+        <pre><code class="language-c">#include &lt;stdio.h&gt; // printf() を外部から取り入れる
 
 int main(void)
 {
@@ -157,7 +152,7 @@ int main(void)
     // プログラムを終了する
     return 0;
 }</code></pre>
-        </figure>
+
         <h2>\(\KaTeX\) 数式のテスト</h2>
         <h3>オイラーの等式</h3>
         <p>
