@@ -36,7 +36,7 @@
 }
 
 /* === モバイル対応 === */
-@media (max-width: 767px) {
+@media (max-width: 650px) {
     .indent {
         margin-left: 1rem;
     }
@@ -74,7 +74,7 @@ body {
     margin: 0 2rem;
 
     width: 100%;
-    max-width: 767px;
+    max-width: 650px;
 }
 
 header {
