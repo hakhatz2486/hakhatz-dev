@@ -2,13 +2,12 @@
 /* ライトモード */
 :root {
     --background-color: #fbf1c7;
-    --text-color: #242424;
+    --text-color: #282828;
 
-    --border-color: darkgray;
+    --border-color: #d9c8a4;
 
-    --blockquote-color: darkgray;
+    --blockquote-color: #d9c8a4;
 
-    --link-basecolor: #8a5cf5;
     --link-color: #6a36dd;
     --link-hover-color: #4a1da3;
 
