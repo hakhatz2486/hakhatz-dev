@@ -1,35 +1,37 @@
-/* === ライト/ダークモード対応 === */
-/* ライトモード */
+/* === ライト/ダークテーマ対応 === */
+/* ライトテーマ */
 :root {
+    /* Gruvbox Light風 */
     --background-color: #fbf1c7;
     --text-color: #282828;
 
-    --border-color: #d9c8a4;
+    --border-line-color: #d9c8a4;
 
-    --blockquote-color: #d9c8a4;
+    --blockquote-vertical-line-color: #d9c8a4;
 
-    --link-color: #6a36dd;
-    --link-hover-color: #4a1da3;
+    --link-color: #076678; /* Faded Blue */
+    --link-hover-color: #458588; /* Neutral Blue */
 
-    --code-inline-text-color: #c7254e;
-    --code-inline-background-color: #f9f2f4;
+    --code-inline-text-color: #9d0006; /* Faded Red */
+    --code-inline-background-color: #f2e5bc; /* bg1_light */
 }
 
-/* ダークモード */
+/* ダークテーマ */
 @media (prefers-color-scheme: dark) {
     :root {
+        /* Gruvbox Dark風 */
         --background-color: #282828;
         --text-color: #fbf1c7;
 
-        --border-color: #4c4642;
+        --border-line-color: #4c4642;
 
-        --blockquote-color: #4c4642;
+        --blockquote-vertical-line-color: #4c4642;
 
-        --link-color: #8a5cf5;
-        --link-hover-color: #c5b6fc;
+        --link-color: #83a598; /* Gruvbox Blue */
+        --link-hover-color: #a1beb1; /* 明度+15% */
 
-        --code-inline-text-color: #ff4d79;
-        --code-inline-background-color: #3a262c;
+        --code-inline-text-color: #fb4934; /* Gruvbox Red */
+        --code-inline-background-color: #3f241a;
     }
 }
 
@@ -73,7 +75,7 @@ body {
 }
 
 header {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-line-color);
 
     a,
     a:link,
@@ -88,7 +90,7 @@ header {
 }
 
 footer {
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-line-color);
     margin: 2em 0;
 }
 
@@ -109,7 +111,7 @@ a {
 }
 
 blockquote {
-    border-left: 0.25em solid var(--blockquote-color);
+    border-left: 0.25em solid var(--blockquote-vertical-line-color);
     margin: auto 0;
     padding: 0 0 0 1em;
 }
