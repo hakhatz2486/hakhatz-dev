@@ -50,6 +50,13 @@
 html {
     display: flex;
     justify-content: center;
+    
+    font-family:
+        ui-sans-serif,
+        system-ui,
+        /* Mac/iOS向けシステムフォント */ -apple-system,
+        /* レガシーMac/iOS向けシステムフォント */ BlinkMacSystemFont ,
+        sans-serif;
 }
 
 body {
@@ -64,13 +71,6 @@ body {
 
     width: 100%;
     max-width: 767px;
-
-    font-family:
-        ui-sans-serif,
-        system-ui,
-        /* Mac/iOS向けシステムフォント */ -apple-system,
-        /* レガシーMac/iOS向けシステムフォント */ blinkmacsystemfont,
-        sans-serif;
 }
 
 header {
