@@ -1,0 +1,13 @@
+# hakhatz.dev
+
+> 白捌（はくはつ / hakhatz）の個人サイト、ブログ、およびポートフォリオを格納するWebサイトです。
+
+## 主要ページ
+
+- [/](https://hakhatz.dev/) - トップページ。サイトの最新情報や全体へのナビゲーションを提供します。
+- [/profile/](https://hakhatz.dev/profile/) - プロフィールページ。白捌の自己紹介、スキル、制作実績などのポートフォリオ情報が記載されています。
+- [/sandbox/](https://hakhatz.dev/sandbox/) - サンドボックス。実験的なコードや実装、各種デモなどを公開するスペースです。
+
+## サイトのリソース
+
+- [/sitemap.xml](https://hakhatz.dev/sitemap.xml) - サイト全体の構造を示すXMLサイトマップです。
