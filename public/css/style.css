@@ -51,6 +51,9 @@
 html {
     display: flex;
     justify-content: center;
+
+    font-size: 17px;
+    line-height: 1.8rem;
     
     font-family:
         ui-sans-serif,
