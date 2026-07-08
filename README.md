@@ -45,3 +45,7 @@ HTML, CSS, JavaScript, その他ソースコード
 
 テキスト、画像、その他メディアのライセンス
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+### サードパーティ
+
+- [Prism.js](https://prismjs.com/) (MIT License)
