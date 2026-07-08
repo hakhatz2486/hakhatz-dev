@@ -1,4 +1,4 @@
-本ライセンスは、本リポジトリ内のソースコード(プログラム、スクリプト、スタイルシートの構造)にのみ適用されます。Webサイト上のテキストや画像などのコンテンツには適用されません。
+The MIT License (MIT)
 
 Copyright (c) 2026 hakhatz
 
@@ -16,6 +16,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+LIABILITY、WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+----------------------------------------------------------------------
+
+Exceptions and Separate Licenses for Content:
+
+The MIT License specified above applies strictly to the source code, scripts,
+and software components of this website.
+
+All other non-software textual content, documentation, images, and media
+assets contained in this website are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 hakhatz
