@@ -8,6 +8,7 @@
 - 装飾は最小限に留め、シンプルさによる資格負荷の低減の面から読みやすさを追求する
 - HTMLとブラウザのデフォルトに主軸を置き、補助としてCSS/JSを使用する
 - Google Lighthouseを活用してパフォーマンスの改善に努める
+- [motherfuckingwebsite](https://motherfuckingwebsite.com/)や[派生サイト](https://github.com/lyoshenka/awesome-motherfucking-website)を参考にする
 
 ## ディレクトリ構成
 
