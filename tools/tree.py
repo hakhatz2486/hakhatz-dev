@@ -33,7 +33,7 @@ def main():
     root_name = os.path.basename(root_dir)
 
     # 走査から除外するディレクトリのリスト
-    exclude_dirs = {".git", "__pycache__", "node_modules", "venv"}
+    exclude_dirs = {".git", "__pycache__", "node_modules", "venv", "node_modules", ".astro"}
 
     # ディレクトリ構造を辞書として構築
     tree_data = {root_name: build_tree(root_dir, exclude_dirs)}
