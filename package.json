@@ -1,5 +1,5 @@
 {
-  "name": "tmp-astro-project",
+  "name": "hakhatz-dev",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -13,5 +13,9 @@
   },
   "dependencies": {
     "astro": "latest"
+  },
+  "devDependencies": {
+    "@astrojs/language-server": "^2.16.11",
+    "typescript": "^6.0.3"
   }
 }

@@ -1,5 +1,8 @@
 __pycache__/
 
+# エディタ設定
+/.zed/
+
 # 各種依存パッケージ（最重要）
 node_modules/
 
