@@ -1,10 +1,13 @@
 ---
 // src/layouts/Layout.astro
 interface Props {
-    title: string;
+    title?: string;
+    description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+const displayTitle = title ? `${title} - hakhatz.dev` : "hakhatz.dev";
+const displayDescription = description || "白捌(hakhatz)のウェブサイトです。";
 ---
 
 <!doctype html>
@@ -12,17 +15,16 @@ const { title } = Astro.props;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title}</title>
         <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/prism.css" />
+        <link rel="icon" href="/images/hakhatz2486_32.ico" sizes="32x32" />
+        <link rel="icon" href="/images/hakhatz2486_48.ico" sizes="48x48" />
+
+        <title>{displayTitle}</title>
+        <meta name="description" content={displayDescription} />
     </head>
     <body>
         <header>
-            <nav>
-                <a href="/">Top</a>
-                <a href="/profile">Profile</a>
-                <a href="/sandbox">Sandbox</a>
-            </nav>
+            <p><a href="/">hakhatz.dev</a></p>
         </header>
 
         <main>
@@ -30,9 +32,12 @@ const { title } = Astro.props;
         </main>
 
         <footer>
-            <p>&copy; 2026 hakhatz.dev</p>
+            <p>&copy; 2026 hakhatz</p>
+            <p>
+                <a href="https://github.com/hakhatz2486/hakhatz-dev"
+                    >GitHub - hakhatz2486/hakhatz-dev</a
+                >
+            </p>
         </footer>
-
-        <script src="/js/prism.js" is:inline></script>
     </body>
 </html>
