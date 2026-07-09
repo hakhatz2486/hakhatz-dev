@@ -18,17 +18,20 @@
 ## ディレクトリ構成
 
 - `.git/hooks/`
-    - `post-commit`: PowerShellから`post-commit`を実行するためのスクリプト
-    - `post-commit.ps1`: `hakhatz-dev/scripts/generate-sitemap.py`を実行しサイトマップを生成する
+  - `post-commit`: PowerShellから`post-commit`を実行するためのスクリプト
+  - `post-commit.ps1`: `hakhatz-dev/scripts/generate-sitemap.py`を実行しサイトマップを生成する
 - `public/`: 公開される静的ファイルのルート
-    - `css/`: スタイルシート
-    - `images/`: アイコンや画像
-    - `js/`: JavaScript(現在(2026-06-06)は未使用)
-- `scripts/`: 開発・保守用スクリプトを格納する
-    - `escape-code.py`: テキストを実体参照に変換するスクリプト
-    - `generate-sitemap.py`: サイトマップ(`public/sitemap.xml`)を自動生成するスクリプト
-    - `serve.ps1`: Pythonの標準機能を利用して、ローカル環境で簡易的なWebサーバーを起動するスクリプト
-    - `tree.py`: ディレクトリ構造をYAML形式で出力するスクリプト
+  - `css/`: スタイルシート
+  - `images/`: アイコンや画像
+  - `js/`: JavaScript
+- `src/`: Astroのソース
+  - `layouts/`: 共通レイアウト
+  - `pages/`: 各ページ
+- `tools/`: 開発・保守用スクリプトを格納する
+  - `escape-code.py`: テキストを実体参照に変換するスクリプト
+  - `generate-sitemap.py`: サイトマップ(`public/sitemap.xml`)を自動生成するスクリプト
+  - `serve.ps1`: Pythonの標準機能を利用して、ローカル環境で簡易的なWebサーバーを起動するスクリプト
+  - `tree.py`: ディレクトリ構造をYAML形式で出力するスクリプト
 
 ## ローカル開発環境
 
