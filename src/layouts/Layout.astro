@@ -3,9 +3,11 @@
 interface Props {
     title?: string;
     description?: string;
+    usePrism?: boolean;
+    useKatex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, usePrism = false, useKatex = false } = Astro.props;
 const displayTitle = title ? `${title} - hakhatz.dev` : "hakhatz.dev";
 const displayDescription = description || "白捌(hakhatz)のウェブサイトです。";
 ---
@@ -21,6 +23,37 @@ const displayDescription = description || "白捌(hakhatz)のウェブサイト�
 
         <title>{displayTitle}</title>
         <meta name="description" content={displayDescription} />
+
+        {usePrism && (
+            <>
+                <link rel="stylesheet" href="/css/prism.css" />
+                <script defer src="/js/prism.js"></script>
+            </>
+        )}
+
+        {useKatex && (
+            <>
+                <link
+                    rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css"
+                    integrity="sha384-vlBdW0r3AcZO/HboRPznQNowvexd3fY8qHOWkBi5q7KGgqJ+F48+DceybYmrVbmB"
+                    crossorigin="anonymous"
+                />
+                <script
+                    defer
+                    src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.js"
+                    integrity="sha384-AtrdNsnxl/75rvBneBVH7DtOvCxSVahR2zWqle1coBKd8DEmLoviqNeJSx64gNAs"
+                    crossorigin="anonymous"
+                ></script>
+                <script
+                    defer
+                    src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/contrib/auto-render.min.js"
+                    integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+                    crossorigin="anonymous"
+                    onload="renderMathInElement(document.body)"
+                ></script>
+            </>
+        )}
     </head>
     <body>
         <header>
