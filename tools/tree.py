@@ -10,9 +10,10 @@ def build_tree(path, exclude_dirs):
     d = {}
     try:
         for entry in os.scandir(path):
-            # 除外対象のディレクトリ（.git や scripts など）はスキップ
             if entry.is_dir():
                 if entry.name in exclude_dirs:
+                    # 除外対象のディレクトリ自体は追加し、子は除外されている旨を文字列で格納
+                    d[entry.name] = "[Excluded]"
                     continue
                 # ディレクトリの場合は再帰的に中身を取得
                 d[entry.name] = build_tree(entry.path, exclude_dirs)
@@ -33,7 +34,7 @@ def main():
     root_name = os.path.basename(root_dir)
 
     # 走査から除外するディレクトリのリスト
-    exclude_dirs = {".git", "__pycache__", "node_modules", "venv", "node_modules", ".astro"}
+    exclude_dirs = {".git", "__pycache__", "node_modules", "venv", ".astro"}
 
     # ディレクトリ構造を辞書として構築
     tree_data = {root_name: build_tree(root_dir, exclude_dirs)}
