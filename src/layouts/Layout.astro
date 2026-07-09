@@ -1,0 +1,38 @@
+---
+// src/layouts/Layout.astro
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/prism.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/">Top</a>
+                <a href="/profile">Profile</a>
+                <a href="/sandbox">Sandbox</a>
+            </nav>
+        </header>
+
+        <main>
+            <slot />
+        </main>
+
+        <footer>
+            <p>&copy; 2026 hakhatz.dev</p>
+        </footer>
+
+        <script src="/js/prism.js" is:inline></script>
+    </body>
+</html>

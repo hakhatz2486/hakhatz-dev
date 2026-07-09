@@ -1,1 +1,15 @@
 __pycache__/
+
+# 各種依存パッケージ（最重要）
+node_modules/
+
+# Astroのビルド出力ディレクトリ
+dist/
+
+# Astroが自動生成する内部キャッシュ・型定義フォルダ
+.astro/
+
+# ログファイル
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
