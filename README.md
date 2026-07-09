@@ -49,13 +49,11 @@ npm run dev
 
 ### ソースコード
 
-HTML, CSS, JavaScript, その他ソースコード
-[MIT License](https://opensource.org/license/mit)
+HTML, CSS, JavaScript, その他ソースコード:[MIT License](https://opensource.org/license/mit)
 
 ### コンテンツ
 
-テキスト、画像、その他メディアのライセンス
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+テキスト、画像、その他メディアのライセンス:[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ### サードパーティ
 
