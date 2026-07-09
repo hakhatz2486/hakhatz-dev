@@ -10,6 +10,11 @@
 - Google Lighthouseを活用してパフォーマンスの改善に努める
 - [motherfuckingwebsite](https://motherfuckingwebsite.com/)や[派生サイト](https://github.com/lyoshenka/awesome-motherfucking-website)を参考にする
 
+## 技術スタック
+
+- Astro: 静的サイトジェネレーター(SSG)として使用
+- Cloudflare Pages: ホスティングプラットフォームとして使用、GitHubと連携して自動デプロイを構築
+
 ## ディレクトリ構成
 
 - `.git/hooks/`
@@ -27,13 +32,15 @@
 
 ## ローカル開発環境
 
-本プロジェクトはWindowsで開発されています。確認する場合はWindows PowerShellを使用してください。
+本プロジェクトはWindowsで開発されています。動作確認をする場合はWindows PowerShellの使用を推奨します。
 
 ### 実行例
 
 ```PowerShell
-.\scrips\serve.ps1
+npm run dev
 ```
+
+ブラウザで`localhost:4321`に接続する。
 
 ## [ライセンス](LICENSE)
 
