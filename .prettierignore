@@ -1,0 +1,3 @@
+# <pre>タグ内に手動整形済みのコードサンプルを含むため、prettier-plugin-astroによる
+# 自動整形の対象から除外する(is:rawブロックのため <!-- prettier-ignore --> は機能しない)
+src/pages/sandbox/index.astro
