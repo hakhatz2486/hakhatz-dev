@@ -33,6 +33,16 @@
     --code-inline-text-color: #fb4934; /* Gruvbox Red */
     --code-inline-background-color: #3f241a;
   }
+
+  /* ShikiのフェンスコードブロックをOSのダークモードに連動させる */
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
 }
 
 /* === モバイル対応 === */
@@ -56,6 +66,7 @@ html {
   line-height: 1.8rem;
 
   font-family:
+    Noto Sans JP,
     ui-sans-serif,
     system-ui,
     /* Mac/iOS向けシステムフォント */ -apple-system,
@@ -135,7 +146,7 @@ code {
   margin: 0 0.2em;
   border-radius: 3px;
   font-size: 0.9em;
-  font-family: ui-monospace, monospace;
+  font-family: PlemolJP, ui-monospace, monospace;
   white-space: nowrap;
 }
 
