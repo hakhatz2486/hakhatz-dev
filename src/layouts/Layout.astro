@@ -1,13 +1,20 @@
 ---
 // src/layouts/Layout.astro
-interface Props {
+interface Frontmatter {
   title?: string;
   description?: string;
-  usePrism?: boolean;
   useKatex?: boolean;
 }
+interface Props extends Frontmatter {
+  // Markdownページの `layout:` frontmatterから使われる場合、値はここに入る
+  frontmatter?: Frontmatter;
+}
 
-const { title, description, usePrism = false, useKatex = false } = Astro.props;
+const {
+  title,
+  description,
+  useKatex = false,
+} = Astro.props.frontmatter ?? Astro.props;
 const displayTitle = title ? `${title} - hakhatz.dev` : "hakhatz.dev";
 const displayDescription = description || "白捌(hakhatz)のウェブサイトです。";
 ---
@@ -23,15 +30,6 @@ const displayDescription = description || "白捌(hakhatz)のウェブサイト�
 
     <title>{displayTitle}</title>
     <meta name="description" content={displayDescription} />
-
-    {
-      usePrism && (
-        <>
-          <link rel="stylesheet" href="/css/prism.css" />
-          <script defer src="/js/prism.js" />
-        </>
-      )
-    }
 
     {
       useKatex && (

@@ -1,146 +1,164 @@
 /* === ライト/ダークテーマ対応 === */
 /* ライトテーマ */
 :root {
-    /* Gruvbox Light風 */
-    --background-color: #fbf1c7;
-    --text-color: #282828;
+  /* Gruvbox Light風 */
+  --background-color: #fbf1c7;
+  --text-color: #282828;
 
-    --border-line-color: #d9c8a4;
+  --border-line-color: #d9c8a4;
 
-    --blockquote-vertical-line-color: #d9c8a4;
+  --blockquote-vertical-line-color: #d9c8a4;
 
-    --link-color: #076678; /* Faded Blue */
-    --link-hover-color: #458588; /* Neutral Blue */
+  --link-color: #076678; /* Faded Blue */
+  --link-hover-color: #458588; /* Neutral Blue */
 
-    --code-inline-text-color: #9d0006; /* Faded Red */
-    --code-inline-background-color: #f2e5bc; /* bg1_light */
+  --code-inline-text-color: #9d0006; /* Faded Red */
+  --code-inline-background-color: #f2e5bc; /* bg1_light */
 }
 
 /* ダークテーマ */
 @media (prefers-color-scheme: dark) {
-    :root {
-        /* Gruvbox Dark風 */
-        --background-color: #282828;
-        --text-color: #fbf1c7;
+  :root {
+    /* Gruvbox Dark風 */
+    --background-color: #282828;
+    --text-color: #fbf1c7;
 
-        --border-line-color: #4c4642;
+    --border-line-color: #4c4642;
 
-        --blockquote-vertical-line-color: #4c4642;
+    --blockquote-vertical-line-color: #4c4642;
 
-        --link-color: #83a598; /* Gruvbox Blue */
-        --link-hover-color: #a1beb1; /* 明度+15% */
+    --link-color: #83a598; /* Gruvbox Blue */
+    --link-hover-color: #a1beb1; /* 明度+15% */
 
-        --code-inline-text-color: #fb4934; /* Gruvbox Red */
-        --code-inline-background-color: #3f241a;
-    }
+    --code-inline-text-color: #fb4934; /* Gruvbox Red */
+    --code-inline-background-color: #3f241a;
+  }
 }
 
 /* === モバイル対応 === */
 @media (max-width: 650px) {
-    .indent {
-        margin-left: 1rem;
-    }
+  .indent {
+    margin-left: 1rem;
+  }
 }
 
 *,
 *::before,
 *::after {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 html {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    font-size: 17px;
-    line-height: 1.8rem;
-    
-    font-family:
-        ui-sans-serif,
-        system-ui,
-        /* Mac/iOS向けシステムフォント */ -apple-system,
-        /* レガシーMac/iOS向けシステムフォント */ BlinkMacSystemFont ,
-        sans-serif;
+  font-size: 17px;
+  line-height: 1.8rem;
+
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    /* Mac/iOS向けシステムフォント */ -apple-system,
+    /* レガシーMac/iOS向けシステムフォント */ BlinkMacSystemFont,
+    sans-serif;
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 
-    transition:
-        background-color 0.5s,
-        color 0.5s;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
 
-    margin: 1rem 2rem;
+  margin: 1rem 2rem;
 
-    width: 100%;
-    max-width: 650px;
+  width: 100%;
+  max-width: 650px;
+  min-width: 0;
 }
 
 header {
-    border-bottom: 1px solid var(--border-line-color);
+  border-bottom: 1px solid var(--border-line-color);
 
-    a,
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-decoration-line: none;
-        color: var(--text-color);
-    }
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration-line: none;
+    color: var(--text-color);
+  }
 }
 
 footer {
-    border-top: 1px solid var(--border-line-color);
-    margin: 2em 0;
+  border-top: 1px solid var(--border-line-color);
+  margin: 2em 0;
 }
 
 /* リンクの大きさは24px以上のルールを満たす https://dequeuniversity.com/rules/axe/4.11/target-size */
 a {
-    display: inline-block;
-    min-height: 24px;
+  display: inline-block;
+  min-height: 24px;
 
-    &:link,
-    &:visited {
-        color: var(--link-color);
-    }
+  &:link,
+  &:visited {
+    color: var(--link-color);
+  }
 
-    &:hover,
-    &:active {
-        color: var(--link-hover-color);
-    }
+  &:hover,
+  &:active {
+    color: var(--link-hover-color);
+  }
 }
 
 blockquote {
-    border-left: 0.25em solid var(--blockquote-vertical-line-color);
-    margin: auto 0;
-    padding: 0 0 0 1em;
+  border-left: 0.25em solid var(--blockquote-vertical-line-color);
+  margin: auto 0;
+  padding: 0 0 0 1em;
 }
 
-code.code-inline {
-    display: inline;
-    color: var(--code-inline-text-color);
-    background-color: var(--code-inline-background-color);
-    padding: 0.15em 0.3em;
-    margin: 0 0.2em;
-    border-radius: 3px;
-    font-size: 0.9em;
-    font-family: ui-monospace, monospace;
-    white-space: nowrap;
+pre {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+code {
+  display: inline;
+  color: var(--code-inline-text-color);
+  background-color: var(--code-inline-background-color);
+  padding: 0.15em 0.3em;
+  margin: 0 0.2em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: ui-monospace, monospace;
+  white-space: nowrap;
+}
+
+pre code {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border-radius: 0;
+  font-size: inherit;
+  white-space: pre;
+  color: inherit;
 }
 
 math {
-    font-family: math, ui-serif;
+  font-family: math, ui-serif;
 }
 
 .profile-image {
-    max-width: 100px;
-    max-height: 100px;
-    border-radius: 50%;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
 }
 
 .indent {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
