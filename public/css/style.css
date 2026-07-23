@@ -12,8 +12,7 @@
   --link-color: #076678; /* Faded Blue */
   --link-hover-color: #458588; /* Neutral Blue */
 
-  --code-inline-text-color: #9d0006; /* Faded Red */
-  --code-inline-background-color: #f2e5bc; /* bg1_light */
+  --code-inline-background-color: #ebdbb2; /* bg1 */
 }
 
 /* ダークテーマ */
@@ -30,8 +29,7 @@
     --link-color: #83a598; /* Gruvbox Blue */
     --link-hover-color: #a1beb1; /* 明度+15% */
 
-    --code-inline-text-color: #fb4934; /* Gruvbox Red */
-    --code-inline-background-color: #3f241a;
+    --code-inline-background-color: #3c3836; /* bg1 */
   }
 
   /* ShikiのフェンスコードブロックをOSのダークモードに連動させる */
@@ -140,7 +138,6 @@ pre {
 
 code {
   display: inline;
-  color: var(--code-inline-text-color);
   background-color: var(--code-inline-background-color);
   padding: 0.15em 0.3em;
   margin: 0 0.2em;
@@ -157,7 +154,6 @@ pre code {
   border-radius: 0;
   font-size: inherit;
   white-space: pre;
-  color: inherit;
 }
 
 math {
