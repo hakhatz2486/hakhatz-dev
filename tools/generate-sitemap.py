@@ -1,6 +1,6 @@
 import os
 import subprocess
-from datetime import datetime
+from datetime import datetime, timezone
 
 # 基本設定
 site_url = "https://hakhatz.dev/"
@@ -21,7 +21,14 @@ for root, dirs, files in os.walk(html_dir):
             # ファイルのフルパスを取得
             file_full_path = os.path.join(root, file)
 
+            # dist/ からの相対パスを取得(URL用にパス区切りを`/`へ統一)
+            rel_path = os.path.relpath(file_full_path, html_dir).replace(os.sep, "/")
+
             # 1. Gitの履歴から「最終更新日」を取得
+            # dist/はgit管理外(.gitignore)のため、対応するsrc/pages/内の
+            # 元ファイルのパスでgit logを引く
+            src_rel = rel_path[: -len("index.html")] + "index.md"
+            src_full_path = os.path.join(repo_root, "src", "pages", src_rel)
             try:
                 result_mod = subprocess.run(
                     [
@@ -30,7 +37,7 @@ for root, dirs, files in os.walk(html_dir):
                         "-1",
                         "--format=%cd",
                         "--date=format:%Y-%m-%d",
-                        file_full_path,
+                        src_full_path,
                     ],
                     capture_output=True,
                     text=True,
@@ -39,10 +46,12 @@ for root, dirs, files in os.walk(html_dir):
                 )
                 lastmod_date = result_mod.stdout.strip()
                 if not lastmod_date:
-                    lastmod_date = datetime.now().strftime("%Y-%m-%d")
+                    lastmod_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
             except (subprocess.CalledProcessError, FileNotFoundError):
                 mtime = os.path.getmtime(file_full_path)
-                lastmod_date = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
+                lastmod_date = datetime.fromtimestamp(mtime, tz=timezone.utc).strftime(
+                    "%Y-%m-%d"
+                )
 
             # # 2. Gitの履歴から「最初のコミット日（作成日）」を取得
             # try:
@@ -66,9 +75,6 @@ for root, dirs, files in os.walk(html_dir):
             #         created_date = datetime.now().strftime("%Y-%m-%d")
             # except (subprocess.CalledProcessError, FileNotFoundError):
             #     created_date = lastmod_date  # エラー時は最終更新日を流用
-
-            # public/ からの相対パスを取得(URL用にパス区切りを`/`へ統一)
-            rel_path = os.path.relpath(file_full_path, html_dir).replace(os.sep, "/")
 
             # URLの構築ルール
             if rel_path == "index.html":
