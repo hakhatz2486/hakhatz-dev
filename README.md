@@ -18,19 +18,18 @@
 ## ディレクトリ構成
 
 - `.git/hooks/`
-  - `post-commit`: PowerShellから`post-commit`を実行するためのスクリプト
-  - `post-commit.ps1`: `hakhatz-dev/scripts/generate-sitemap.py`を実行しサイトマップを生成する
-- `public/`: 公開される静的ファイルのルート
+  - `post-commit`: PowerShellから`post-commit.ps1`を実行するためのスクリプト
+  - `post-commit.ps1`: `tools/generate-sitemap.py`を実行しサイトマップを生成する
+- `dist/`: `astro build`の出力先(公開される静的ファイルのルート、`.gitignore`対象)
+- `public/`: `dist/`にそのままコピーされる静的アセット置き場
   - `css/`: スタイルシート
   - `images/`: アイコンや画像
-  - `js/`: JavaScript
 - `src/`: Astroのソース
   - `layouts/`: 共通レイアウト
-  - `pages/`: 各ページ
+  - `pages/`: 各ページ(Markdownで記述)
 - `tools/`: 開発・保守用スクリプトを格納する
   - `escape-code.py`: テキストを実体参照に変換するスクリプト
-  - `generate-sitemap.py`: サイトマップ(`public/sitemap.xml`)を自動生成するスクリプト
-  - `serve.ps1`: Pythonの標準機能を利用して、ローカル環境で簡易的なWebサーバーを起動するスクリプト
+  - `generate-sitemap.py`: `dist/`内の`*.html`を走査してサイトマップ(`public/sitemap.xml`)を自動生成するスクリプト
   - `tree.py`: ディレクトリ構造をYAML形式で出力するスクリプト
 
 ## ローカル開発環境
@@ -54,7 +53,3 @@ HTML, CSS, JavaScript, その他ソースコード: [MIT License](https://openso
 ### コンテンツ
 
 テキスト、画像、その他メディアのライセンス: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
-### サードパーティ
-
-- [Prism.js](https://prismjs.com/) (MIT License)
