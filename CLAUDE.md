@@ -22,7 +22,7 @@ hakhatz.dev — Astroで構築された個人サイト(日本語コンテンツ)
 - `src/layouts/Layout.astro` — 唯一の共通ページシェル(header/footer/`<head>`)。Props: `title`, `description`, `useKatex`(CDN経由でKaTeXを読み込み数式レンダリングを有効化)。Markdownページの`layout` frontmatterから呼ばれた場合、propsは`Astro.props.frontmatter`に入るため、Layout.astro側で両対応している。
 - `src/layouts/templates/index.md` — 新規ページ追加時にコピーするための空ページテンプレート(title/descriptionは空、useKatexはoff)。`src/pages/<name>/index.md`と同じく`src`から2階層下にあるため、`layout`の相対パスはそのままコピー先でも通用する。
 - importパスの癖: Viteのエイリアスによりベアな`src`が`/src`にマッピングされる(`astro.config.mjs`と`tsconfig.json`の`paths`参照)。現状ページは全てMarkdown化されておりこのエイリアスを使うページはないが、今後`.astro`コンポーネントを追加する場合に備えて設定は残している。
-- `public/` — `astro build`時に`dist/`へそのままコピーされる静的アセット置き場(サイトの公開ルートそのものではない点に注意): `css/`(スタイルシート), `images/`(アイコン・写真)。テーマはGruvboxのライト/ダークパレットを`public/css/style.css`内のCSSカスタムプロパティで実装し、`prefers-color-scheme`で切り替える。リポジトリルートの`color.table`はこれらの値の元になっているGruvboxパレットの参照表。
+- `public/` — `astro build`時に`dist/`へそのままコピーされる静的アセット置き場(サイトの公開ルートそのものではない点に注意): `css/`(スタイルシート), `images/`(アイコン・写真)。テーマはGruvboxのライト/ダークパレットを`public/css/style.css`内のCSSカスタムプロパティで実装し、`prefers-color-scheme`で切り替える。リポジトリルートの`gruvbox-color-table.md`はこれらの値の元になっているGruvboxパレットの参照表([出典](https://github.com/morhetz/gruvbox-contrib/blob/master/color.table))。
 - `tools/` — Astroのビルドには含まれない、独立した開発・保守用スクリプト群:
   - `generate-sitemap.py` — `astro build`の出力先である`dist/`内の`*.html`を走査し(`public/`ではない。実行前に`npm run build`が必要)、対応する`src/pages/`内の元ファイルのgit履歴から`<lastmod>`を取得して`public/sitemap.xml`を生成する。`public/`に書き出すのは、次回ビルド時に静的アセットとして`dist/`へそのままコピーされるようにするため。
   - `escape-code.py` — argvまたは標準入力からのテキストをHTMLエスケープする(コードサンプルを`.astro`のマークアップに貼り付ける際に便利)。
