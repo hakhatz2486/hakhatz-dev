@@ -7,8 +7,9 @@ site_url = "https://hakhatz.dev/"
 
 # スクリプトのベース位置からの相対パスを設定
 base_dir = os.path.dirname(os.path.abspath(__file__))
-html_dir = os.path.abspath(os.path.join(base_dir, "..", "public"))
-sitemap_path = os.path.join(html_dir, "sitemap.xml")
+repo_root = os.path.abspath(os.path.join(base_dir, ".."))
+html_dir = os.path.join(repo_root, "dist")
+sitemap_path = os.path.join(repo_root, "public", "sitemap.xml")
 
 xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
 xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -66,8 +67,8 @@ for root, dirs, files in os.walk(html_dir):
             # except (subprocess.CalledProcessError, FileNotFoundError):
             #     created_date = lastmod_date  # エラー時は最終更新日を流用
 
-            # public/ からの相対パスを取得
-            rel_path = os.path.relpath(file_full_path, html_dir)
+            # public/ からの相対パスを取得(URL用にパス区切りを`/`へ統一)
+            rel_path = os.path.relpath(file_full_path, html_dir).replace(os.sep, "/")
 
             # URLの構築ルール
             if rel_path == "index.html":
