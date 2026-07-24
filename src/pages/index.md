@@ -23,5 +23,6 @@ description: 白捌(はくはつ/hakhatz)のウェブサイトです。
 - [Greasy Fork](https://greasyfork.org/ja/users/1625355-hakhatz2486): [Tampermonkey](https://www.tampermonkey.net/)や[Violentmonkey](https://violentmonkey.github.io/)で実行可能なユーザースクリプトを公開しています
     - [Claude Logo Replacer: Clawd](https://greasyfork.org/ja/scripts/587693-claude-logo-replacer-clawd): Claude.aiのデフォルトのロゴとファビコンを、Claude CodeのキャラクターであるClawdに置き換えます。
     - [X One Click Button](https://greasyfork.org/ja/scripts/587690-x-one-click-button): X(Twitter)のポストやフォロー中/フォロワーの一覧に対し、ブロック、ミュート、フォロー解除等の操作をワンクリックで実行できるようにするボタンを追加します。
+    - [Font Override](https://greasyfork.org/ja/scripts/588330-font-override): Webページの指定フォントを上書きし、ユーザーの好みのフォント(ローカルインストール済み)に統一します。
 - [AtCoder](https://atcoder.jp/users/hakhatz2486)
 - [X](https://x.com/hakhatz2486)
