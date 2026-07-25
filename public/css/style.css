@@ -215,6 +215,21 @@ math {
   font-family: math, ui-serif;
 }
 
+sub,
+sup {
+  position: relative;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
 table {
   display: block;
   overflow-x: auto;
