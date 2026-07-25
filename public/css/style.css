@@ -1,35 +1,88 @@
+/* === Gruvbox Color Palette ===
+ * 出典: https://github.com/morhetz/gruvbox-contrib/blob/master/color.table
+ * (gruvbox-color-table.md参照)
+ */
+:root {
+  /* Dark */
+  --gb-dark0-hard: #1d2021;
+  --gb-dark0: #282828;
+  --gb-dark0-soft: #32302f;
+  --gb-dark1: #3c3836;
+  --gb-dark2: #504945;
+  --gb-dark3: #665c54;
+  --gb-dark4: #7c6f64;
+  --gb-gray-245: #928374;
+  --gb-gray-244: #928374;
+
+  /* Light */
+  --gb-light0-hard: #f9f5d7;
+  --gb-light0: #fbf1c7;
+  --gb-light0-soft: #f2e5bc;
+  --gb-light1: #ebdbb2;
+  --gb-light2: #d5c4a1;
+  --gb-light3: #bdae93;
+  --gb-light4: #a89984;
+
+  /* Bright */
+  --gb-bright-red: #fb4934;
+  --gb-bright-green: #b8bb26;
+  --gb-bright-yellow: #fabd2f;
+  --gb-bright-blue: #83a598;
+  --gb-bright-purple: #d3869b;
+  --gb-bright-aqua: #8ec07c;
+  --gb-bright-orange: #fe8019;
+
+  /* Neutral */
+  --gb-neutral-red: #cc241d;
+  --gb-neutral-green: #98971a;
+  --gb-neutral-yellow: #d79921;
+  --gb-neutral-blue: #458588;
+  --gb-neutral-purple: #b16286;
+  --gb-neutral-aqua: #689d6a;
+  --gb-neutral-orange: #d65d0e;
+
+  /* Faded */
+  --gb-faded-red: #9d0006;
+  --gb-faded-green: #79740e;
+  --gb-faded-yellow: #b57614;
+  --gb-faded-blue: #076678;
+  --gb-faded-purple: #8f3f71;
+  --gb-faded-aqua: #427b58;
+  --gb-faded-orange: #af3a03;
+}
+
 /* === ライト/ダークテーマ対応 === */
 /* ライトテーマ */
 :root {
   /* Gruvbox Light風 */
-  --background-color: #fbf1c7;
-  --text-color: #282828;
+  --background-color: var(--gb-light0);
+  --text-color: var(--gb-dark0);
 
   --border-line-color: #d9c8a4;
 
   --blockquote-vertical-line-color: #d9c8a4;
 
-  --link-color: #076678; /* Faded Blue */
-  --link-hover-color: #458588; /* Neutral Blue */
+  --link-color: var(--gb-faded-blue);
+  --link-hover-color: var(--gb-neutral-blue);
 
-  --code-inline-background-color: #ebdbb2; /* bg1 */
+  --code-inline-background-color: var(--gb-light1);
 }
 
 /* ダークテーマ */
 @media (prefers-color-scheme: dark) {
   :root {
     /* Gruvbox Dark風 */
-    --background-color: #282828;
-    --text-color: #fbf1c7;
+    --background-color: var(--gb-dark0);
+    --text-color: var(--gb-light0);
 
     --border-line-color: #4c4642;
 
     --blockquote-vertical-line-color: #4c4642;
 
-    --link-color: #83a598; /* Gruvbox Blue */
+    --link-color: var(--gb-bright-blue);
     --link-hover-color: #a1beb1; /* 明度+15% */
 
-    --code-inline-background-color: #3c3836; /* bg1 */
+    --code-inline-background-color: var(--gb-dark1);
   }
 
   /* ShikiのフェンスコードブロックをOSのダークモードに連動させる */
