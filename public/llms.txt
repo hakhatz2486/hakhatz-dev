@@ -1,12 +1,13 @@
 # hakhatz.dev
 
-> 白捌（はくはつ / hakhatz）の個人サイト、ブログ、およびポートフォリオを格納するWebサイトです。
+> 白捌(はくはつ / hakhatz)の個人サイトです。プロフィールや、HTML/CSS/JS練習用のサンドボックス、GitHubやGreasy Forkなどで公開している制作物へのリンクを掲載しています。
 
 ## 主要ページ
 
-- [/](https://hakhatz.dev/) - トップページ。サイトの最新情報や全体へのナビゲーションを提供します。
-- [/profile/](https://hakhatz.dev/profile/) - プロフィールページ。白捌の自己紹介、スキル、制作実績などのポートフォリオ情報が記載されています。
-- [/sandbox/](https://hakhatz.dev/sandbox/) - サンドボックス。実験的なコードや実装、各種デモなどを公開するスペースです。
+- [/](https://hakhatz.dev/) - トップページ。サイトの概要と各サブページへの案内のほか、GitHub(リポジトリ・AutoHotkeyスクリプト・Chrome用テーマ)、Greasy Fork(ユーザースクリプト)、AtCoder、Xなど外部リンク一覧を掲載しています。
+- [/profile/](https://hakhatz.dev/profile/) - プロフィールページ。自己紹介文と、サバゲー・日記・散歩(雑草撮影)・ゲーム(にゃんこ大戦争、Eatventure、Chess.comタクティクス)といった趣味を掲載しています。
+- [/sandbox/](https://hakhatz.dev/sandbox/) - サンドボックス。HTML/CSS/JSの表示確認用ページで、引用文(Wikipedia・SCP財団からの引用)、C++/Cのコードブロック、KaTeXによる数式(オイラーの等式、定積分、総和)、表組み(交通手段比較表)のサンプルを掲載しています。
+- [/template/](https://hakhatz.dev/template/) - 新規ページ作成時の下敷きとなるテンプレートページです。ヘッダーとフッターの表示例を確認できます。
 
 ## サイトのリソース
 
