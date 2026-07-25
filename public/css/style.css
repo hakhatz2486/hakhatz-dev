@@ -66,6 +66,7 @@
   --link-hover-color: var(--gb-neutral-blue);
 
   --code-inline-background-color: var(--gb-light1);
+  --table-stripe-background-color: var(--gb-light0-soft);
 }
 
 /* ダークテーマ */
@@ -83,6 +84,7 @@
     --link-hover-color: #a1beb1; /* 明度+15% */
 
     --code-inline-background-color: var(--gb-dark1);
+    --table-stripe-background-color: var(--gb-dark0-soft);
   }
 
   /* ShikiのフェンスコードブロックをOSのダークモードに連動させる */
@@ -211,6 +213,30 @@ pre code {
 
 math {
   font-family: math, ui-serif;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  border: 1px solid var(--border-line-color);
+}
+
+th,
+td {
+  padding: 0.25em 0.8em;
+  border: 1px solid var(--border-line-color);
+  white-space: nowrap;
+}
+
+thead th {
+  background-color: var(--code-inline-background-color);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--table-stripe-background-color);
 }
 
 .profile-image {
