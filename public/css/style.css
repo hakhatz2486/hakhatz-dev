@@ -58,9 +58,9 @@
   --background-color: var(--gb-light0);
   --text-color: var(--gb-dark0);
 
-  --border-line-color: #d9c8a4;
+  --border-line-color: var(--gb-light2);
 
-  --blockquote-vertical-line-color: #d9c8a4;
+  --blockquote-vertical-line-color: var(--gb-light2);
 
   --link-color: var(--gb-faded-blue);
   --link-hover-color: var(--gb-neutral-blue);
@@ -75,9 +75,9 @@
     --background-color: var(--gb-dark0);
     --text-color: var(--gb-light0);
 
-    --border-line-color: #4c4642;
+    --border-line-color: var(--gb-dark1);
 
-    --blockquote-vertical-line-color: #4c4642;
+    --blockquote-vertical-line-color: var(--gb-dark1);
 
     --link-color: var(--gb-bright-blue);
     --link-hover-color: #a1beb1; /* 明度+15% */
