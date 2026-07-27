@@ -162,6 +162,11 @@ footer {
   margin: 2em 0;
 }
 
+.footer-icon {
+  margin-right: 0.25em;
+  vertical-align: -0.125em;
+}
+
 /* リンクの大きさは24px以上のルールを満たす https://dequeuniversity.com/rules/axe/4.11/target-size */
 a {
   display: inline-block;
