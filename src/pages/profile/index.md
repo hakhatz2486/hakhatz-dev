@@ -26,6 +26,7 @@ description: 白捌のプロフィールです。
   - 雑草撮影
 - ゲーム
   - にゃんこ大戦争
-  - Eatventure
   - ぴよ将棋
   - Chess.com
+- 飲酒
+  - ウイスキー
