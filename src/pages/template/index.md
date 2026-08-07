@@ -2,9 +2,10 @@
 layout: ../../layouts/Layout.astro
 title: テンプレート
 description: これはヘッダーとフッターのテンプレートページです。
-useKatex: false # 未記載のデフォルトは`false`
+useKatex: true # 未記載のデフォルトは`false`
 ---
 
 # テンプレート
 
-これはヘッダーとフッターのテンプレートページです。使用する場合は`template/index.md`のフロントマターの`title`と`description`を変更してください。
+これはヘッダーとフッターのテンプレートページです。
+使用する場合は`template/index.md`のフロントマターの`title`と`description`を変更し、\\(\KaTeX\\)数式を使用する場合は`useKatex`を`true`に設定してください。
