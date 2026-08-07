@@ -58,7 +58,7 @@
   --background-color: var(--gb-light0);
   --text-color: var(--gb-dark0);
 
-  --border-line-color: var(--gb-light2);
+  --border-line-color: var(--gb-gray-244);
 
   --blockquote-vertical-line-color: var(--gb-light2);
 
@@ -76,7 +76,7 @@
     --background-color: var(--gb-dark0);
     --text-color: var(--gb-light0);
 
-    --border-line-color: var(--gb-dark1);
+    --border-line-color: var(--gb-gray-245);
 
     --blockquote-vertical-line-color: var(--gb-dark1);
 
