@@ -8,6 +8,8 @@ hakhatz.dev — Astroで構築された個人サイト(日本語コンテンツ)
 
 設計方針(README記載): 装飾は最小限に留め、スタイリングよりも読みやすさ・シンプルさを優先する。HTMLとブラウザのデフォルトを主軸に、CSS/JSは補助として使用する。Google Lighthouseでパフォーマンスを確認する。motherfuckingwebsite.com系のミニマリズムを参考にしている。
 
+アクセシビリティ方針: WCAG 2.1レベルAAに準拠する。特にコントラスト比(4.5:1以上)とフォントサイズ(`1rem`以上、README参照)、リンクのタップ領域(24px以上、`public/css/style.css`のコメント参照)に留意する。
+
 ## コマンド
 
 - `npm run dev` — 開発サーバーを起動(`localhost:4321`)

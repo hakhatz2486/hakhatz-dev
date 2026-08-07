@@ -218,7 +218,7 @@ code {
   padding: 0.15em 0.3em;
   margin: 0 0.2em;
   border-radius: 3px;
-  font-size: 0.9em;
+  font-size: 1rem;
   font-family: PlemolJP, ui-monospace, monospace;
   white-space: nowrap;
 }

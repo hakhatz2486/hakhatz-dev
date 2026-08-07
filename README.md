@@ -6,6 +6,8 @@
 
 - 静的ファイルで構築
 - 装飾は最小限に留め、シンプルさによる視覚負荷の低減の面から読みやすさを追求する
+- 十分なコントラスト比を確保(標準テキストは `4.5:1`、太字や大きな文字は `3:1`)したり、フォントサイズは1rem以上にしたりといったウェブアクセシビリティに配慮する
+    - [WCAG](https://waic.jp/translations/WCAG22/)に準拠する
 - HTMLとブラウザのデフォルトに主軸を置き、補助としてCSS/JSを使用する
 - Google Lighthouseを活用してパフォーマンスの改善に努める
 - [motherfuckingwebsite](https://motherfuckingwebsite.com/)や[派生サイト](https://github.com/lyoshenka/awesome-motherfucking-website)を参考にする
