@@ -24,9 +24,9 @@ hakhatz.dev — Astroで構築された個人サイト(日本語コンテンツ)
 - importパスの癖: Viteのエイリアスによりベアな`src`が`/src`にマッピングされる(`astro.config.mjs`と`tsconfig.json`の`paths`参照)。現状ページは全てMarkdown化されておりこのエイリアスを使うページはないが、今後`.astro`コンポーネントを追加する場合に備えて設定は残している。
 - `public/` — `astro build`時に`dist/`へそのままコピーされる静的アセット置き場(サイトの公開ルートそのものではない点に注意): `css/`(スタイルシート), `images/`(アイコン・写真)。テーマはGruvboxのライト/ダークパレットを`public/css/style.css`内のCSSカスタムプロパティで実装し、`prefers-color-scheme`で切り替える。リポジトリルートの`gruvbox-color-table.md`はこれらの値の元になっているGruvboxパレットの参照表([出典](https://github.com/morhetz/gruvbox-contrib/blob/master/color.table))。
 - `tools/` — Astroのビルドには含まれない、独立した開発・保守用スクリプト群:
-  - `generate-sitemap.py` — `astro build`の出力先である`dist/`内の`*.html`を走査し(`public/`ではない。実行前に`npm run build`が必要)、対応する`src/pages/`内の元ファイルのgit履歴から`<lastmod>`を取得して`public/sitemap.xml`を生成する。`public/`に書き出すのは、次回ビルド時に静的アセットとして`dist/`へそのままコピーされるようにするため。
-  - `escape-code.py` — argvまたは標準入力からのテキストをHTMLエスケープする(コードサンプルを`.astro`のマークアップに貼り付ける際に便利)。
-  - `tree.py` — リポジトリのディレクトリ構造をYAML形式でダンプする(`.git`, `node_modules`, `.astro`などは除外)。
+    - `generate-sitemap.py` — `astro build`の出力先である`dist/`内の`*.html`を走査し(`public/`ではない。実行前に`npm run build`が必要)、対応する`src/pages/`内の元ファイルのgit履歴から`<lastmod>`を取得して`public/sitemap.xml`を生成する。`public/`に書き出すのは、次回ビルド時に静的アセットとして`dist/`へそのままコピーされるようにするため。
+    - `escape-code.py` — argvまたは標準入力からのテキストをHTMLエスケープする(コードサンプルを`.astro`のマークアップに貼り付ける際に便利)。
+    - `tree.py` — リポジトリのディレクトリ構造をYAML形式でダンプする(`.git`, `node_modules`, `.astro`などは除外)。
 - `.git/hooks/post-commit` + `post-commit.ps1` — ローカル(未追跡)のフックで、コミット後に`tools/generate-sitemap.py`を実行してサイトマップを再生成し、差分があればコミットにamendする。以前は呼び出しパスが`tools/`へのディレクトリ名変更に追従できておらず壊れていたが、現在は修正済み。ただし`generate-sitemap.py`は`dist/`を走査するため、事前に`npm run build`でビルドしていないとサイトマップが空になる点に注意。
 
 ## ライセンス

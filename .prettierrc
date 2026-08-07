@@ -6,6 +6,12 @@
       "options": {
         "parser": "astro"
       }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "tabWidth": 4
+      }
     }
   ]
 }
