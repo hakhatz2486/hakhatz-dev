@@ -1,6 +1,6 @@
 # hakhatz.dev
 
-> 白捌(はくはつ / hakhatz)の個人サイトです。プロフィールや、HTML/CSS/JS練習用のサンドボックス、GitHubやGreasy Forkなどで公開している制作物へのリンクを掲載しています。
+> 白捌(はくはつ/hakhatz2486)の個人サイトです。プロフィールや、HTML/CSS/JS練習用のサンドボックス、GitHubやGreasy Forkなどで公開している制作物へのリンクを掲載しています。
 
 ## 主要ページ
 
