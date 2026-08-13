@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: /src/layouts/Layout.astro
 title: テンプレート
 description: これはヘッダーとフッターのテンプレートページです。
 useKatex: true # 未記載のデフォルトは`false`

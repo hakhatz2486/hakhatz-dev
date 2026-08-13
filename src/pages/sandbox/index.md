@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: /src/layouts/Layout.astro
 title: サンドボックス
 description: HTML,CSS,JS練習用のサンドボックスページです。
 useKatex: true

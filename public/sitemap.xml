@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hakhatz.dev/404.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-13</lastmod>
   </url>
   <url>
     <loc>https://hakhatz.dev/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://hakhatz.dev/game/run/</loc>
+    <lastmod>2026-08-13</lastmod>
   </url>
   <url>
     <loc>https://hakhatz.dev/profile/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-13</lastmod>
   </url>
   <url>
     <loc>https://hakhatz.dev/sandbox/</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-08-13</lastmod>
   </url>
   <url>
     <loc>https://hakhatz.dev/template/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-13</lastmod>
   </url>
 </urlset>

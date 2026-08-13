@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Layout.astro
+layout: /src/layouts/Layout.astro
 title: hakhatz.devへようこそ!
 description: 白捌(はくはつ/hakhatz2486)のウェブサイトです。
 ---
