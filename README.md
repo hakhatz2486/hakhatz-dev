@@ -46,12 +46,16 @@ npm run dev
 
 ブラウザで`localhost:4321`に接続する。
 
-## [ライセンス](LICENSE)
+## ライセンス
+
+ソースコードとコンテンツで適用されるライセンスが異なるため、ライセンスファイルを分けています。
 
 ### ソースコード
 
-HTML, CSS, JavaScript, その他ソースコード: [MIT License](https://opensource.org/license/mit)
+HTML, CSS, JavaScript, その他ソースコード: [MIT License](https://opensource.org/license/mit)([LICENSE](LICENSE))
 
 ### コンテンツ
 
-テキスト、画像、その他メディアのライセンス: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+テキスト、画像、その他メディア: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)([LICENSE-CONTENT](LICENSE-CONTENT))
+
+ただし、コンテンツ内に埋め込まれたコードスニペットはMIT Licenseの対象です。
