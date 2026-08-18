@@ -16,7 +16,7 @@ description: 白捌(はくはつ/hakhatz2486)のウェブサイトです。
 
 ## 外部リンク
 
-各サービスのアカウントページと、それらで公開している制作物の一覧です。
+各サービスのアカウントページと、公開している制作物の一覧です。
 
 - [GitHub](https://github.com/hakhatz2486)
     - [hakhatz-dev](https://github.com/hakhatz2486/hakhatz-dev): このサイトのリポジトリです。
