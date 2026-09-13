@@ -218,6 +218,11 @@ hr {
   margin: 2em 0;
 }
 
+/* remark-tocが`## 目次`見出しの直後に生成するリンク一覧と、次のセクションとの間隔を空ける */
+h2#目次 + ul {
+  margin-bottom: 2rem;
+}
+
 blockquote {
   border-left: 0.25em solid var(--blockquote-vertical-line-color);
   margin: auto 0;

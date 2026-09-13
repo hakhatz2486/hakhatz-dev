@@ -2,14 +2,13 @@
 layout: /src/layouts/Layout.astro
 title: "ポートフォリオ"
 description: "公開している制作物の一覧です。"
-useKatex: false
 ---
 
 # ポートフォリオ
 
 公開している制作物の一覧です。
 
-- [hakhatz-dev](https://github.com/hakhatz2486/hakhatz-dev): このサイトのリポジトリです。
+## 目次
 
 ## Chrome
 

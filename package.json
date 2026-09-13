@@ -12,7 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "latest"
+    "@astrojs/markdown-remark": "^7.2.1",
+    "astro": "latest",
+    "remark-toc": "^9.0.0"
   },
   "devDependencies": {
     "@astrojs/language-server": "^2.16.11",
