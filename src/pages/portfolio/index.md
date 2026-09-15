@@ -15,11 +15,14 @@ description: "公開している制作物の一覧です。"
 
 ### GitHub配布
 
-- [gruvbox-zed-for-chrome](https://github.com/hakhatz2486/gruvbox-zed-for-chrome): Zedエディタ向けに調整された Gruvbox のカラーパレットを、Google Chrome用に移植したテーマです。ダークモード用とライトモード用の両方があります。
-- [ymm4-subtitle-exporter](https://github.com/hakhatz2486/ymm4-subtitle-exporter): YMM4(ゆっくりムービーメーカー4)プラグイン。動画のエンコード不要で、字幕ファイルを複数形式とキャラ名有無を選択して出力します。
-- [ahk-f13-keybindings](https://github.com/hakhatz2486/ahk-f13-keybindings): F13キーをショートカットキーとして使用するための AutoHotkey v2 スクリプトです。
+- [gruvbox-zed-for-chrome](https://github.com/hakhatz2486/gruvbox-zed-for-chrome): Zedエディタ向けに調整された Gruvbox のカラーパレットを、Google Chrome用に移植したテーマ。ダークモード用とライトモード用の両方があります。
+- [ymm4-subtitle-exporter](https://github.com/hakhatz2486/ymm4-subtitle-exporter): YMM4(ゆっくりムービーメーカー4)プラグイン。動画のエンコード不要で、字幕ファイルを複数形式とキャラ名有無を選択して出力できます。
+- [ahk-f13-keybindings](https://github.com/hakhatz2486/ahk-f13-keybindings): F13キーをショートカットキーとして使用するための AutoHotkey v2 スクリプト。
+- [hakhatz2486/custom-newtab-html-css-js](https://github.com/hakhatz2486/custom-newtab-html-css-js): 中継ページを経由せずindex.htmlから直接転送することで、ダークモード時の白画面表示を防ぐChrome新規タブ拡張機能。
 
 ### Greasy Fork配布
+
+Violentmonkey等で動作するユーザースクリプトを配布しています。
 
 - [Claude Logo Replacer: Clawd](https://greasyfork.org/ja/scripts/587693-claude-logo-replacer-clawd): Claude.ai のデフォルトのロゴとファビコンを、Claude Code のキャラクターである Clawd に置き換えます。
 - [X One Click Button](https://greasyfork.org/ja/scripts/587690-x-one-click-button): X (Twitter) のポストやフォロー中/フォロワーの一覧に対し、ブロック、ミュート、フォロー解除等の操作をワンクリックで実行できるようにするボタンを追加します。
