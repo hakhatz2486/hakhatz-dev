@@ -20,4 +20,3 @@ description: 白捌(はくはつ/hakhatz2486)のウェブサイトです。
 - [GitHub](https://github.com/hakhatz2486)
 - [Greasy Fork](https://greasyfork.org/ja/users/1625355-hakhatz2486)
 - [X (Twitter)](https://x.com/hakhatz2486)
-- [AtCoder](https://atcoder.jp/users/hakhatz2486)
