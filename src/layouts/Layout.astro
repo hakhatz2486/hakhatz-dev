@@ -3,20 +3,26 @@
 interface Frontmatter {
   title?: string;
   description?: string;
-  useKatex?: boolean;
 }
 interface Props extends Frontmatter {
   // Markdownページの `layout:` frontmatterから使われる場合、値はここに入る
   frontmatter?: Frontmatter;
 }
 
-const {
-  title,
-  description,
-  useKatex = false,
-} = Astro.props.frontmatter ?? Astro.props;
+const { title, description } = Astro.props.frontmatter ?? Astro.props;
 const displayTitle = title ? `${title} - hakhatz.dev` : "hakhatz.dev";
-const displayDescription = description || "白捌(hakhatz2486)のウェブサイトです。";
+const displayDescription =
+  description || "白捌(hakhatz2486)のウェブサイトです。";
+
+// 本文に実際にKaTeXの区切り文字($$, \(, \[)が含まれるかを判定し、
+// 含まれる場合のみKaTeXのCDNリソースを読み込む。
+// \begin{equation}等のLaTeX環境記法は現状どのページも使用していないため対象外。
+const bodyHtml = await Astro.slots.render("default");
+const KATEX_DELIMITER_PATTERN = /\$\$|\\\(|\\\[/;
+const textForKatexDetection = bodyHtml
+  .replace(/<pre[\s\S]*?<\/pre>/gi, "")
+  .replace(/<code[\s\S]*?<\/code>/gi, "");
+const needsKatex = KATEX_DELIMITER_PATTERN.test(textForKatexDetection);
 ---
 
 <!doctype html>
@@ -32,7 +38,7 @@ const displayDescription = description || "白捌(hakhatz2486)のウェブサイ
     <meta name="description" content={displayDescription} />
 
     {
-      useKatex && (
+      needsKatex && (
         <>
           <link
             rel="stylesheet"
@@ -62,9 +68,7 @@ const displayDescription = description || "白捌(hakhatz2486)のウェブサイ
       <p><a href="/">hakhatz.dev</a></p>
     </header>
 
-    <main>
-      <slot />
-    </main>
+    <main set:html={bodyHtml} />
 
     <footer>
       <p>
