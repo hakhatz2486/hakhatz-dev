@@ -26,9 +26,22 @@ for root, dirs, files in os.walk(html_dir):
 
             # 1. Gitの履歴から「最終更新日」を取得
             # dist/はgit管理外(.gitignore)のため、対応するsrc/pages/内の
-            # 元ファイルのパスでgit logを引く
-            src_rel = rel_path[: -len("index.html")] + "index.md"
-            src_full_path = os.path.join(repo_root, "src", "pages", src_rel)
+            # 元ファイルのパスでgit logを引く。src/pages/はフラットな
+            # <name>.mdと従来のフォルダ+index.mdが混在しうるため両対応する
+            if rel_path.endswith("index.html"):
+                dir_part = rel_path[: -len("index.html")]
+                flat_candidate = os.path.join(
+                    repo_root, "src", "pages", dir_part.rstrip("/") + ".md"
+                )
+                folder_candidate = os.path.join(
+                    repo_root, "src", "pages", dir_part, "index.md"
+                )
+                src_full_path = (
+                    flat_candidate if os.path.isfile(flat_candidate) else folder_candidate
+                )
+            else:
+                src_rel = rel_path[: -len(".html")] + ".md"
+                src_full_path = os.path.join(repo_root, "src", "pages", src_rel)
             try:
                 result_mod = subprocess.run(
                     [
