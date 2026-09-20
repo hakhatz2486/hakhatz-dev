@@ -14,10 +14,8 @@ const displayTitle = title ? `${title} - hakhatz.dev` : "hakhatz.dev";
 const displayDescription =
   description || "白捌(hakhatz2486)のウェブサイトです。";
 
-// OGP用の絶対URL。astro.config.mjsに`site`は未設定のため、
-// tools/generate-sitemap.pyのsite_urlと同様にここでドメインを固定値として持つ。
-const SITE_URL = "https://hakhatz.dev";
-const ogUrl = `${SITE_URL}${Astro.url.pathname}`;
+// OGP用の絶対URL。ドメインはastro.config.mjsの`site`から取得する。
+const ogUrl = new URL(Astro.url.pathname, Astro.site).href;
 
 // 本文に実際にKaTeXの区切り文字($$, \(, \[)が含まれるかを判定し、
 // 含まれる場合のみKaTeXのCDNリソースを読み込む。

@@ -5,6 +5,7 @@ import remarkToc from "remark-toc";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://hakhatz.dev",
   markdown: {
     // Markdown中に`## 目次`見出しを書くと、その直下に見出し一覧へのリンクを自動生成する
     processor: unified({
