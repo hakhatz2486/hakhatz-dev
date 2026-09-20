@@ -14,6 +14,11 @@ const displayTitle = title ? `${title} - hakhatz.dev` : "hakhatz.dev";
 const displayDescription =
   description || "白捌(hakhatz2486)のウェブサイトです。";
 
+// OGP用の絶対URL。astro.config.mjsに`site`は未設定のため、
+// tools/generate-sitemap.pyのsite_urlと同様にここでドメインを固定値として持つ。
+const SITE_URL = "https://hakhatz.dev";
+const ogUrl = `${SITE_URL}${Astro.url.pathname}`;
+
 // 本文に実際にKaTeXの区切り文字($$, \(, \[)が含まれるかを判定し、
 // 含まれる場合のみKaTeXのCDNリソースを読み込む。
 // \begin{equation}等のLaTeX環境記法は現状どのページも使用していないため対象外。
@@ -36,6 +41,13 @@ const needsKatex = KATEX_DELIMITER_PATTERN.test(textForKatexDetection);
 
     <title>{displayTitle}</title>
     <meta name="description" content={displayDescription} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={displayTitle} />
+    <meta property="og:description" content={displayDescription} />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:site_name" content="hakhatz.dev" />
+    <meta property="og:locale" content="ja_JP" />
 
     {
       needsKatex && (
