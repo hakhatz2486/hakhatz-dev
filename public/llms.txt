@@ -8,6 +8,7 @@
 
 ### サブページ
 
+- [/blog/](https://hakhatz.dev/blog/): ブログ一覧ページ。個々の記事は/blog/<slug>/に掲載。
 - [/portfolio/](https://hakhatz.dev/portfolio/): ポートフォリオページ。GitHubやGreasy Forkで公開している制作物の一覧を掲載。
 - [/profile/](https://hakhatz.dev/profile/): プロフィールページ。
 - [/sandbox/](https://hakhatz.dev/sandbox/): サンドボックス。HTML/CSS/JSの表示確認用ページで、引用文、コードブロック、KaTeX数式、表のサンプルを掲載しています。

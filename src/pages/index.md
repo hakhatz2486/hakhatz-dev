@@ -10,6 +10,7 @@ description: 白捌(はくはつ/hakhatz2486)のウェブサイトです。
 
 ## サブページ
 
+- [ブログ](/blog)
 - [ポートフォリオ](/portfolio)
 - [プロフィール](/profile)
 - [サンドボックス](/sandbox)

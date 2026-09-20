@@ -1,0 +1,25 @@
+---
+import Layout from "/src/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout title="ブログ" description="hakhatz.devのブログです。">
+  <h1>ブログ</h1>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <time datetime={post.data.pubDate.toISOString()}>
+            {post.data.pubDate.toISOString().slice(0, 10)}
+          </time>
+          {": "}
+          <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

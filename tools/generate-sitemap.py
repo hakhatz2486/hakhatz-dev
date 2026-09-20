@@ -27,17 +27,24 @@ for root, dirs, files in os.walk(html_dir):
             # 1. Gitの履歴から「最終更新日」を取得
             # dist/はgit管理外(.gitignore)のため、対応するsrc/pages/内の
             # 元ファイルのパスでgit logを引く。src/pages/はフラットな
-            # <name>.mdと従来のフォルダ+index.mdが混在しうるため両対応する
+            # <name>.mdと従来のフォルダ+index.mdが混在しうるため両対応する。
+            # さらにblog(Content Collections)は一覧ページがsrc/pages/配下の
+            # .astro、個々の記事がsrc/content/blog/配下の.mdという別ソースに
+            # なるため、これらも候補に含めて順に存在確認する
             if rel_path.endswith("index.html"):
                 dir_part = rel_path[: -len("index.html")]
-                flat_candidate = os.path.join(
-                    repo_root, "src", "pages", dir_part.rstrip("/") + ".md"
-                )
-                folder_candidate = os.path.join(
-                    repo_root, "src", "pages", dir_part, "index.md"
-                )
-                src_full_path = (
-                    flat_candidate if os.path.isfile(flat_candidate) else folder_candidate
+                candidates = [
+                    os.path.join(
+                        repo_root, "src", "pages", dir_part.rstrip("/") + ".md"
+                    ),
+                    os.path.join(repo_root, "src", "pages", dir_part, "index.md"),
+                    os.path.join(repo_root, "src", "pages", dir_part, "index.astro"),
+                    os.path.join(
+                        repo_root, "src", "content", dir_part.rstrip("/") + ".md"
+                    ),
+                ]
+                src_full_path = next(
+                    (c for c in candidates if os.path.isfile(c)), candidates[0]
                 )
             else:
                 src_rel = rel_path[: -len(".html")] + ".md"
