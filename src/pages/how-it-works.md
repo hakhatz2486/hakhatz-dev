@@ -34,7 +34,7 @@ hakhatz.devの技術的な構成、公開の仕組み、ライセンスをまと
 
 ## ライセンス
 
-ソースコード(HTML/CSS/JS)は[MIT License](https://opensource.org/license/mit)、コンテンツ(テキスト・画像・その他メディア)は[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)です。
+ソースコードは[MIT License](https://opensource.org/license/mit)、コンテンツ(テキスト・画像・その他メディア)は[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)です。
 
 ### サードパーティライセンス
 
