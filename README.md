@@ -39,9 +39,16 @@
 
 本プロジェクトはWindowsで開発されています。動作確認をする場合はWindows PowerShellの使用を推奨します。
 
-### 実行例
+### 必要環境
+
+- Node.js `22.12.0`以上(`package.json`の`engines`参照)
+
+### セットアップ
 
 ```PowerShell
+git clone https://github.com/hakhatz2486/hakhatz-dev.git
+cd hakhatz-dev
+npm install
 npm run dev
 ```
 
