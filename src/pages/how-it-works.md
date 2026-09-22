@@ -14,6 +14,7 @@ hakhatz.devの技術的な構成、公開の仕組み、ライセンスをまと
 
 - [Astro](https://astro.build/): 静的サイトジェネレーター(SSG)。各ページはMarkdownで書かれ、ビルド時に静的なHTMLへ変換される
 - [remark-toc](https://github.com/remarkjs/remark-toc): Markdownページ内の`## 目次`見出し直下に見出し一覧へのリンクを自動生成する
+- [Shiki](https://shiki.style/): Astroに標準搭載されているシンタックスハイライター。フェンスコードブロックを自動でハイライトする
 - [KaTeX](https://katex.org/): 本文に`$$`や`\(...\)`などの数式区切り文字が含まれる場合に自動で有効化される
 - Astro Content Collections: ブログ記事の一覧化・日付順の並び替えに使用(他のページとは異なる管理方式)
 - [Cloudflare Pages](https://pages.cloudflare.com/): ホスティングプラットフォーム
