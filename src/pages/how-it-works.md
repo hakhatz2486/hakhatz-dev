@@ -21,7 +21,7 @@ hakhatz.devの技術的な構成、公開の仕組み、ライセンスをまと
 
 ## 公開の流れ
 
-コードは[GitHub](https://github.com/hakhatz2486/hakhatz-dev)で管理しています。
+コードはGitHubで管理しています。
 `main`ブランチにpushすると、Cloudflare Pagesが自動的にビルドとデプロイを行い、このサイトに反映されます。
 
 ## 設計方針
@@ -30,12 +30,17 @@ hakhatz.devの技術的な構成、公開の仕組み、ライセンスをまと
 - HTMLとブラウザのデフォルトを主軸に、CSSとJavaScriptは補助として使う
 - [WCAG](https://waic.jp/translations/WCAG22/)レベルAAを目標に、コントラスト比やフォントサイズなどのアクセシビリティに配慮する
 - [motherfuckingwebsite](https://motherfuckingwebsite.com/)系のミニマリズムを参考にする
+- 好みのテーマ([Gruvbox](https://gruvbox.org/)カラーパレット)を使用
 
 ## ライセンス
 
 ソースコード(HTML/CSS/JS)は[MIT License](https://opensource.org/license/mit)、コンテンツ(テキスト・画像・その他メディア)は[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)です。
 
+### サードパーティライセンス
+
+フッターのアイコンは、[Font Awesome Free](https://fontawesome.com/license/free)([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))とGitHubの[公式ロゴ](https://github.com/logos)を使用しています。
+
 ## ソースコード
 
-[GitHubリポジトリ](https://github.com/hakhatz2486/hakhatz-dev)で全文を公開しています。
+GitHubリポジトリ[hakhatz2486/hakhatz-dev](https://github.com/hakhatz2486/hakhatz-dev)で全文を公開しています。
 ディレクトリ構成や開発コマンドなどの詳細は、リポジトリの[README](https://github.com/hakhatz2486/hakhatz-dev/blob/main/README.md)を参照してください。
