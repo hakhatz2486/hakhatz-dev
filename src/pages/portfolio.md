@@ -17,8 +17,8 @@ description: "公開している制作物の一覧です。"
 
 - [gruvbox-zed-for-chrome](https://github.com/hakhatz2486/gruvbox-zed-for-chrome): Zedエディタ向けに調整された Gruvbox のカラーパレットを、Google Chrome用に移植したテーマ。ダークモード用とライトモード用の両方があります。
 - [ymm4-subtitle-exporter](https://github.com/hakhatz2486/ymm4-subtitle-exporter): YMM4(ゆっくりムービーメーカー4)プラグイン。動画のエンコード不要で、字幕ファイルを複数形式とキャラ名有無を選択して出力できます。
-- [ahk-f13-keybindings](https://github.com/hakhatz2486/ahk-f13-keybindings): F13キーをショートカットキーとして使用するための AutoHotkey v2 スクリプト。
-- [hakhatz2486/custom-newtab-html-css-js](https://github.com/hakhatz2486/custom-newtab-html-css-js): 中継ページを経由せずindex.htmlから直接転送することで、ダークモード時の白画面表示を防ぐChrome新規タブ拡張機能。
+- [f13-keybindings](https://github.com/hakhatz2486/f13-keybindings): CapsLockをF13キーとして使用するためのリポジトリ。Windows, AHKv2スクリプトと、Linux,xremapコンフィグを同梱しています。
+- [custom-newtab-html-css-js](https://github.com/hakhatz2486/custom-newtab-html-css-js): 中継ページを経由せずindex.htmlから直接転送することで、ダークモード時の白画面表示を防ぐChrome新規タブ拡張機能。
 
 ### Greasy Fork配布
 
