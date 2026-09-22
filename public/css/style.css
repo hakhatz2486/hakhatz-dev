@@ -114,6 +114,8 @@
 html {
   display: flex;
   justify-content: center;
+  /* スクロールバーの有無で中央位置がずれないよう、常にスクロールバー分の幅を確保する */
+  scrollbar-gutter: stable;
 
   font-size: 17px;
   line-height: 1.8rem;
