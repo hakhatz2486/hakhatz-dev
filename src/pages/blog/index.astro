@@ -18,6 +18,8 @@ const posts = (await getCollection("blog")).sort(
           </time>
           {": "}
           <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+          <br />
+          {post.data.description}
         </li>
       ))
     }
