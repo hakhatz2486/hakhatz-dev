@@ -1,7 +1,7 @@
 ---
 title: ""
 description: ""
-pubDate: ""
+published: ""
 ---
 
 # \_template
