@@ -26,11 +26,11 @@ hakhatz.dev — Astroで構築された個人サイト(日本語コンテンツ)
 - `src/layouts/templates/index.md` — 新規ページ追加時にコピーするための空ページテンプレート(title/descriptionは空)。`layout`は`/src/layouts/Layout.astro`という絶対パス(Viteの`src`→`/src`エイリアス経由)で指定されているため、コピー先が`src/pages/`直下の`<name>.md`であってもパスの書き換えは不要。これは非公開のコピー元であり、`src/pages/template.md`(`/template`として実際に公開されているページ。header/footer/KaTeX/`## 目次`の表示例を兼ねる)とは別物。
 - importパスの癖: Viteのエイリアスによりベアな`src`が`/src`にマッピングされる(`astro.config.mjs`と`tsconfig.json`の`paths`参照)。全MarkdownページのfrontmatterでもLayoutを`/src/layouts/Layout.astro`という絶対パスで指定しており(ページの階層が深くても相対パスの`../`の数を数える必要がないため)、新規ページ追加時のテンプレート(`src/layouts/templates/index.md`)もこの形式に統一している。
 - `public/` — `astro build`時に`dist/`へそのままコピーされる静的アセット置き場(サイトの公開ルートそのものではない点に注意): `css/`(スタイルシート), `images/`(アイコン・写真)。テーマはGruvboxのライト/ダークパレットを`public/css/style.css`内のCSSカスタムプロパティで実装し、`prefers-color-scheme`で切り替える。リポジトリルートの`gruvbox-color-table.md`はこれらの値の元になっているGruvboxパレットの参照表([出典](https://github.com/morhetz/gruvbox-contrib/blob/master/color.table))。`public/llms.txt`はLLMクローラー向けのサイト概要ファイルで、`sitemap.xml`と異なり自動生成されない。ページ構成(新規ページ追加、`src/pages/`配下の内容変更)に合わせて手動で更新する必要がある。
-- `tools/` — Astroのビルドには含まれない、独立した開発・保守用スクリプト群:
+- `.bin/` — Astroのビルドには含まれない、独立した開発・保守用スクリプト群:
     - `generate-sitemap.py` — `astro build`の出力先である`dist/`内の`*.html`を走査し(`public/`ではない。実行前に`npm run build`が必要)、対応する元ファイルのgit履歴から`<lastmod>`を取得して`public/sitemap.xml`を生成する。元ファイルの候補は`src/pages/`直下のフラット`.md`→同名フォルダの`index.md`→同名フォルダの`index.astro`→`src/content/`配下の`.md`(blog記事など)の順に存在確認し、最初に見つかったものを使う。`public/`に書き出すのは、次回ビルド時に静的アセットとして`dist/`へそのままコピーされるようにするため。
     - `escape-code.py` — argvまたは標準入力からのテキストをHTMLエスケープする(コードサンプルを`.astro`のマークアップに貼り付ける際に便利)。
     - `tree.py` — リポジトリのディレクトリ構造をYAML形式でダンプする(`.git`, `node_modules`, `.astro`などは除外)。
-- `.git/hooks/post-commit` + `post-commit.ps1` — ローカル(未追跡)のフックで、コミット後に`tools/generate-sitemap.py`を実行してサイトマップを再生成し、差分があればコミットにamendする。以前は呼び出しパスが`tools/`へのディレクトリ名変更に追従できておらず壊れていたが、現在は修正済み。ただし`generate-sitemap.py`は`dist/`を走査するため、事前に`npm run build`でビルドしていないとサイトマップが空になる点に注意。
+- `.git/hooks/post-commit` + `post-commit.ps1` — ローカル(未追跡)のフックで、コミット後に`.bin/generate-sitemap.py`を実行してサイトマップを再生成し、差分があればコミットにamendする。以前は呼び出しパスが`.bin/`へのディレクトリ名変更に追従できておらず壊れていたが、現在は修正済み。ただし`generate-sitemap.py`は`dist/`を走査するため、事前に`npm run build`でビルドしていないとサイトマップが空になる点に注意。
 
 ## ライセンス
 
