@@ -23,6 +23,7 @@
 - `.git/hooks/`
     - `post-commit`: PowerShellから`post-commit.ps1`を実行するためのスクリプト
     - `post-commit.ps1`: `.bin/generate-sitemap.mjs`を実行しサイトマップを生成する
+- `docs/`: サイトには公開しない、リポジトリ運用上の資料(セキュリティレビュー、Gruvboxの色の参照表など)
 - `dist/`: `astro build`の出力先(公開される静的ファイルのルート、`.gitignore`対象)
 - `public/`: `dist/`にそのままコピーされる静的アセット置き場
     - `css/`: スタイルシート
