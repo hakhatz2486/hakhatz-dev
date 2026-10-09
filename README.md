@@ -31,9 +31,7 @@
     - `layouts/`: 共通レイアウト
     - `pages/`: 各ページ(Markdownで記述)
 - `.bin/`: 開発・保守用スクリプトを格納する
-    - `escape-code.py`: テキストを実体参照に変換するスクリプト
     - `generate-sitemap.py`: `dist/`内の`*.html`を走査してサイトマップ(`public/sitemap.xml`)を自動生成するスクリプト
-    - `tree.py`: ディレクトリ構造をYAML形式で出力するスクリプト
 
 ## ローカル開発環境
 
