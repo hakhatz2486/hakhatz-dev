@@ -28,9 +28,9 @@
 
 - 該当箇所: `public/`(`_headers`ファイルが存在しない)
 - 分類: 多層防御
-- 内容: Content-Security-Policy、`frame-ancestors`(またはX-Frame-Options)、X-Content-Type-Optionsが送出されていません。
+- 内容: Content-Security-Policy、`frame-ancestors`(またはX-Frame-Options)、Strict-Transport-Securityが送出されていません。2026-10-09に公開サイトの応答を確認したところ、X-Content-Type-Options: nosniffとReferrer-Policyは、Cloudflare Pagesが既定で付与していました(初版ではX-Content-Type-Optionsも未送出と記載していたため訂正)。
 - 想定シナリオ: 現状は入力フォームやログインがないため実害は小さいものの、将来ページに生HTMLや外部スクリプトを追加した際の被害を抑える手段がありません。また、第三者サイトにiframeで埋め込まれます。
-- 推奨対応: Cloudflare Pagesの`public/_headers`で、少なくとも`X-Content-Type-Options: nosniff`と`Content-Security-Policy: frame-ancestors 'none'`を設定する。KaTeXを使うページがあるため、`script-src`を絞る場合は`cdn.jsdelivr.net`と`onload`属性のインラインハンドラへの配慮が必要。
+- 推奨対応: Cloudflare Pagesの`public/_headers`で、少なくとも`Content-Security-Policy: frame-ancestors 'none'`を設定する。KaTeXを使うページがあるため、`script-src`を絞る場合は`cdn.jsdelivr.net`と`onload`属性のインラインハンドラへの配慮が必要。
 
 ### 3. [低] post-commitフックが存在しないパスのスクリプトを実行しようとしている
 
