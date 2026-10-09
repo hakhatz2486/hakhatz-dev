@@ -39,6 +39,7 @@
 - 内容: フックは`python ./tools/generate-sitemap.py`を呼び出しますが、スクリプトは`.bin/`へ移動済みで、`tools/`は空のディレクトリとして残っています。`AGENTS.md`には「修正済み」とありますが、実際のフックは旧パスのままです。フック自体も`-ExecutionPolicy Bypass`で起動されます。
 - 想定シナリオ: 別ブランチのチェックアウトや外部から取り込んだ変更で`tools/generate-sitemap.py`が置かれると、コミットのたびにそのスクリプトが無確認で実行されます。ただし`tools/`は`.gitignore`対象外のため`git status`で検知でき、悪用には書き込み権限が必要です。機能面では、現状サイトマップが自動再生成されていません。
 - 推奨対応: `post-commit.ps1`のパスを`./.bin/generate-sitemap.py`に直し、空の`tools/`ディレクトリを削除する。
+- 対応状況: 2026-10-09に`post-commit.ps1`のパスを`./.bin/generate-sitemap.py`へ修正済み。
 
 ### 4. [低] 外部リンクにhttpが使われている
 
