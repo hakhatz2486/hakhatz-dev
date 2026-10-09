@@ -22,7 +22,7 @@
 
 - `.git/hooks/`
     - `post-commit`: PowerShellから`post-commit.ps1`を実行するためのスクリプト
-    - `post-commit.ps1`: `.bin/generate-sitemap.py`を実行しサイトマップを生成する
+    - `post-commit.ps1`: `.bin/generate-sitemap.mjs`を実行しサイトマップを生成する
 - `dist/`: `astro build`の出力先(公開される静的ファイルのルート、`.gitignore`対象)
 - `public/`: `dist/`にそのままコピーされる静的アセット置き場
     - `css/`: スタイルシート
@@ -31,7 +31,7 @@
     - `layouts/`: 共通レイアウト
     - `pages/`: 各ページ(Markdownで記述)
 - `.bin/`: 開発・保守用スクリプトを格納する
-    - `generate-sitemap.py`: `dist/`内の`*.html`を走査してサイトマップ(`public/sitemap.xml`)を自動生成するスクリプト
+    - `generate-sitemap.mjs`: `dist/`内の`*.html`を走査してサイトマップ(`public/sitemap.xml`)を自動生成するスクリプト
 
 ## ローカル開発環境
 
