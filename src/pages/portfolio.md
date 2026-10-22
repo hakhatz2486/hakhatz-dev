@@ -26,3 +26,4 @@ Violentmonkey等で動作するユーザースクリプトを配布していま�
 
 - [Claude Logo Replacer: Clawd](https://greasyfork.org/ja/scripts/587693-claude-logo-replacer-clawd): Claude.ai のデフォルトのロゴとファビコンを、Claude Code のキャラクターである Clawd に置き換えます。
 - [X One Click Button](https://greasyfork.org/ja/scripts/587690-x-one-click-button): X (Twitter) のポストやフォロー中/フォロワーの一覧に対し、ブロック、ミュート、フォロー解除等の操作をワンクリックで実行できるようにするボタンを追加します。
+- [gmail2md](https://greasyfork.org/ja/scripts/600442-gmail2md): GmailをスレッドごとMarkdownでコピーするボタンを追加します。
